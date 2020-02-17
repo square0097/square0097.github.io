@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>write-test</title>
+    <url>/2020/02/17/write-test/</url>
+    <content><![CDATA[<h1 id="写作介绍"><a href="#写作介绍" class="headerlink" title="写作介绍"></a>写作介绍</h1><h2 id="1-字体"><a href="#1-字体" class="headerlink" title="1.字体"></a>1.字体</h2><h4 id="123123123"><a href="#123123123" class="headerlink" title="123123123"></a>123123123</h4><p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong><em>粗斜体</em></strong><br><del>删除线</del></p>
+<h2 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2.分级标题"></a>2.分级标题</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="3-超链接"><a href="#3-超链接" class="headerlink" title="3.超链接"></a>3.超链接</h2><p>[我的博客]<a href="http://square0097.github.io" target="_blank" rel="noopener">http://square0097.github.io</a></p>
+<p>[我的博客][1]<br>[1]:<a href="http://square0097.github.io/" target="_blank" rel="noopener">http://square0097.github.io/</a><br>这是一个平台-[百度][2]<br>[2]:<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a></p>
+<h2 id="4-列表"><a href="#4-列表" class="headerlink" title="4.列表"></a>4.列表</h2><p>无序列表</p>
+<ul>
+<li>无序列表1</li>
+</ul>
+<ul>
+<li>无序列表2</li>
+</ul>
+<ul>
+<li>无序列表3</li>
+</ul>
+<p>有序列表</p>
+<p>1.有序列表1</p>
+<p>2.有序列表2</p>
+<p>3.有序列表3</p>
+<h2 id="5-插入图片"><a href="#5-插入图片" class="headerlink" title="5.插入图片"></a>5.插入图片</h2><p>在 Hexo 中插入图片，首先需要将图片放在 source/posts下同名文件夹内 文件夹下，然后如下方式进行插入：<br><img src="/2020/02/17/write-test/1.jpg" alt></p>
+<h2 id="6，表格"><a href="#6，表格" class="headerlink" title="6，表格"></a>6，表格</h2><table>
+<thead>
+<tr>
+<th>表头1</th>
+<th align="left">表头2</th>
+<th align="center">表头3</th>
+<th align="right">表头4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>默认左对齐</td>
+<td align="left">左对齐</td>
+<td align="center">居中对其</td>
+<td align="right">右对齐</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>字体，格式</tag>
+      </tags>
+  </entry>
+</search>
