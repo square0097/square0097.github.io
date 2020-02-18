@@ -108,15 +108,15 @@
 
 
 
-  <meta name="description" content="总想合伙搞点事情">
+  <meta name="description" content="Document 	 	@keyframes ani{ 		from{ 			transform:rotateY(0deg) rotateX(0deg); 		} 		to{ 			transform:rotateY(360deg) rotateX(360deg); 		} 	} 	body{ 		perspective:1000px; 	} 	#heart{ 		position:r">
 <meta property="og:type" content="website">
-<meta property="og:title" content="pageName">
-<meta property="og:url" content="http://yoursite.com/pageName/pageName.html">
+<meta property="og:title" content="Square0097">
+<meta property="og:url" content="http://yoursite.com/love_you/index.html">
 <meta property="og:site_name" content="Square0097">
-<meta property="og:description" content="总想合伙搞点事情">
+<meta property="og:description" content="Document 	 	@keyframes ani{ 		from{ 			transform:rotateY(0deg) rotateX(0deg); 		} 		to{ 			transform:rotateY(360deg) rotateX(360deg); 		} 	} 	body{ 		perspective:1000px; 	} 	#heart{ 		position:r">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-16T16:20:07.000Z">
-<meta property="article:modified_time" content="2020-02-16T16:20:07.358Z">
+<meta property="article:published_time" content="2020-02-18T10:20:09.125Z">
+<meta property="article:modified_time" content="2020-02-18T10:20:09.125Z">
 <meta property="article:author" content="Square0097">
 <meta name="twitter:card" content="summary">
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/pageName/pageName.html"/>
+  <link rel="canonical" href="http://yoursite.com/love_you/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>pageName | Square0097</title>
+  <title> | Square0097</title>
   
 
 
@@ -173,7 +173,7 @@
   </style>
 </noscript>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -321,7 +321,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">pageName</h1>
+<h1 class="post-title" itemprop="name headline"></h1>
 
 <div class="post-meta">
   
@@ -339,7 +339,69 @@
       <div class="post-body">
         
         
-          
+          <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	@keyframes ani{
+		from{
+			transform:rotateY(0deg) rotateX(0deg);
+		}
+		to{
+			transform:rotateY(360deg) rotateX(360deg);
+		}
+	}
+	body{
+		perspective:1000px;
+	}
+	#heart{
+		position:relative;
+		height:200px;
+		width:150px;
+		margin:200px auto;
+		animation:ani 5s linear infinite; 
+		transform-style:preserve-3d;
+ 
+	}
+	.line{
+		position:absolute;
+		height:200px;
+		width:150px;
+		border:2px solid red;
+		border-left:0;
+		border-bottom:0;
+		border-radius:50% 50% 0/50% 40% 0;
+	}
+	#word{
+		font-family:"隶书";
+		font-size:1.3em;
+		color:red;
+		position:absolute;
+		top: 80px;
+		left:22px;
+		font-weight:bold;
+	}
+ 
+	</style>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+	<div id="heart">
+		<div id="word">I Love 芳</div>
+	</div>
+ 
+	<script>
+		var heart=document.getElementById("heart");
+		var html="";
+		for(var i=0;i<36;i++){
+			html+="<div class='line' style='transform:rotateY("+i*10+"deg) rotateZ(45deg) translateX(25px)'></div>";
+		}
+		heart.innerHTML += html;
+	</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
         
       </div>
       
