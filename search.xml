@@ -1,57 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>write-test</title>
-    <url>/2020/02/17/write-test/</url>
-    <content><![CDATA[<h1 id="写作介绍"><a href="#写作介绍" class="headerlink" title="写作介绍"></a>写作介绍</h1><h2 id="1-字体"><a href="#1-字体" class="headerlink" title="1.字体"></a>1.字体</h2><h4 id="123123123"><a href="#123123123" class="headerlink" title="123123123"></a>123123123</h4><p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong><em>粗斜体</em></strong><br><del>删除线</del></p>
-<h2 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2.分级标题"></a>2.分级标题</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="3-超链接"><a href="#3-超链接" class="headerlink" title="3.超链接"></a>3.超链接</h2><p>[我的博客]<a href="http://square0097.github.io" target="_blank" rel="noopener">http://square0097.github.io</a></p>
-<p>[我的博客][1]<br>[1]:<a href="http://square0097.github.io/" target="_blank" rel="noopener">http://square0097.github.io/</a><br>这是一个平台-[百度][2]<br>[2]:<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a></p>
-<h2 id="4-列表"><a href="#4-列表" class="headerlink" title="4.列表"></a>4.列表</h2><p>无序列表</p>
-<ul>
-<li>无序列表1</li>
-</ul>
-<ul>
-<li>无序列表2</li>
-</ul>
-<ul>
-<li>无序列表3</li>
-</ul>
-<p>有序列表</p>
-<p>1.有序列表1</p>
-<p>2.有序列表2</p>
-<p>3.有序列表3</p>
-<h2 id="5-插入图片"><a href="#5-插入图片" class="headerlink" title="5.插入图片"></a>5.插入图片</h2><p>在 Hexo 中插入图片，首先需要将图片放在 source/posts下同名文件夹内 文件夹下，然后如下方式进行插入：<br><img src="/2020/02/17/write-test/1.jpg" alt></p>
-<h2 id="6，表格"><a href="#6，表格" class="headerlink" title="6，表格"></a>6，表格</h2><table>
+    <title>AT89C51RC/RD系列贴片与P4管脚的使用</title>
+    <url>/2020/02/18/AT89C52/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="/2020/02/18/AT89C52/begin.jpg" alt></p>
+<a id="more"></a>
+
+<h4 id="为啥突然想弄这个了呢"><a href="#为啥突然想弄这个了呢" class="headerlink" title="为啥突然想弄这个了呢"></a>为啥突然想弄这个了呢</h4><p>疫情发展得很迅速，快递全都躺在路上了，补番补得头疼，手头也没什么东西能玩的。看到在路上的51贴片里有P4这个管脚，但是我们51标准的头文件里没有P4管脚的相关定义，于是在家无聊的时间里研究了一下51贴片系列如何使用P4管脚。</p>
+<h2 id="一、AT89C51RC-RD系列贴片封装"><a href="#一、AT89C51RC-RD系列贴片封装" class="headerlink" title="一、AT89C51RC/RD系列贴片封装"></a>一、AT89C51RC/RD系列贴片封装</h2><p>首先我们来看一下他的尺寸，因为毕竟是贴片要打PCB板的，我也是在网上找了很久才找到弄好的封装，不然就要自己手画了。</p>
+<h3 id="1-尺寸"><a href="#1-尺寸" class="headerlink" title="1.尺寸"></a>1.尺寸</h3><p><img src="/2020/02/18/AT89C52/size1.png" alt><br>这是官方文件里51贴片的尺寸图，用来参考整体尺寸还可以，个人觉得管脚尺寸有一些出入。<br>我这里有弄好的51贴片AD封装，需要的加我QQ。</p>
+<h3 id="2-管脚"><a href="#2-管脚" class="headerlink" title="2.管脚"></a>2.管脚</h3><p><img src="/2020/02/18/AT89C52/51_ad3.png" alt></p>
+<p>官方文档里给出的管脚图，我在网上找到的封装里是没有写P4管脚的，写的都是NC，所以要是想使用P4管脚就看这个管脚图吧。</p>
+<h2 id="二、P4管脚的功能"><a href="#二、P4管脚的功能" class="headerlink" title="二、P4管脚的功能"></a>二、P4管脚的功能</h2><p>同样我们还是在官方文档里找，我找了半天，文件页数太多了…<br>其他管脚的功能和直插版的普通芯片是一样的。</p>
+<table>
 <thead>
 <tr>
-<th>表头1</th>
-<th align="left">表头2</th>
-<th align="center">表头3</th>
-<th align="right">表头4</th>
+<th>管脚</th>
+<th align="center">编号</th>
+<th align="center">功能说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>默认左对齐</td>
-<td align="left">左对齐</td>
-<td align="center">居中对其</td>
-<td align="right">右对齐</td>
+<td>P4.0</td>
+<td align="center">17</td>
+<td align="center">标准I/O口 PORT4[0]</td>
 </tr>
 <tr>
-<td>默认左对齐</td>
-<td align="left">左对齐</td>
-<td align="center">居中对其</td>
-<td align="right">右对齐</td>
+<td>P4.1</td>
+<td align="center">28</td>
+<td align="center">标准I/O口 PORT4[1]</td>
 </tr>
 <tr>
-<td>默认左对齐</td>
-<td align="left">左对齐</td>
-<td align="center">居中对其</td>
-<td align="right">右对齐</td>
+<td>P4.2 / INT3</td>
+<td align="center">39</td>
+<td align="center">标准I/O口 PORT4[2]；外部中断3，低电平或下降沿中断</td>
+</tr>
+<tr>
+<td>P4.3 / INT2</td>
+<td align="center">6</td>
+<td align="center">标准I/O口 PORT4[3]；外部中断2，低电平或下降沿中断</td>
+</tr>
+<tr>
+<td>P4.4 / PSEN</td>
+<td align="center">26</td>
+<td align="center">标准I/O口 PORT4[4]；外部程序储存器选通信号输出引脚</td>
+</tr>
+<tr>
+<td>P4.5 / ALE</td>
+<td align="center">27</td>
+<td align="center">标准I/O口 PORT4[5]；地址锁存允许信号输出引脚/编程脉冲输入引脚</td>
+</tr>
+<tr>
+<td>P4.6 / EA</td>
+<td align="center">29</td>
+<td align="center">标准I/O口 PORT4[6]；内外存储器选择引脚</td>
 </tr>
 </tbody></table>
+<p>其实直插芯片里也引出了P4管脚，我们只是不知道哈哈哈</p>
+<h2 id="三、如何使用P4管脚"><a href="#三、如何使用P4管脚" class="headerlink" title="三、如何使用P4管脚"></a>三、如何使用P4管脚</h2><p>为了使用P4我们首先要在标准头文件中添加P4的地址</p>
+<p>在开头位置找到管脚定义   BYTE Registers<br>可以看到</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*  BYTE Registers  *&#x2F;</span><br><span class="line">sfr P0    &#x3D; 0x80;</span><br><span class="line">sfr P1    &#x3D; 0x90;</span><br><span class="line">sfr P2    &#x3D; 0xA0;</span><br><span class="line">sfr P3    &#x3D; 0xB0;</span><br><span class="line">sfr P4    &#x3D; 0xE8;&#x2F;&#x2F;后加的</span><br><span class="line">sfr PSW   &#x3D; 0xD0;</span><br><span class="line">sfr ACC   &#x3D; 0xE0;</span><br><span class="line">sfr B     &#x3D; 0xF0;</span><br><span class="line">sfr SP    &#x3D; 0x81;</span><br><span class="line">sfr DPL   &#x3D; 0x82;</span><br><span class="line">sfr DPH   &#x3D; 0x83;</span><br><span class="line">sfr PCON  &#x3D; 0x87;</span><br><span class="line">sfr TCON  &#x3D; 0x88;</span><br><span class="line">sfr TMOD  &#x3D; 0x89;</span><br><span class="line">sfr TL0   &#x3D; 0x8A;</span><br><span class="line">sfr TL1   &#x3D; 0x8B;</span><br><span class="line">sfr TH0   &#x3D; 0x8C;</span><br><span class="line">sfr TH1   &#x3D; 0x8D;</span><br><span class="line">sfr IE    &#x3D; 0xA8;</span><br><span class="line">sfr IP    &#x3D; 0xB8;</span><br><span class="line">sfr SCON  &#x3D; 0x98;</span><br><span class="line">sfr SBUF  &#x3D; 0x99;</span><br></pre></td></tr></table></figure>
+<p>P4管脚加进来就好了,如果没有看文档的话可能就定义0xC0了…，8，9，A,B,C刚刚好是不是。</p>
+<p>但是，官方文档中写了P4是0xE8！！！</p>
+<h2 id="四、END"><a href="#四、END" class="headerlink" title="四、END"></a>四、END</h2><p>希望各位大佬们熬过疫情&lt;(▰˘◡˘▰)&gt;<br>有问题可以联系我哦</p>
 ]]></content>
-      <tags>
-        <tag>字体，格式</tag>
-      </tags>
   </entry>
 </search>
