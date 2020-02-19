@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>OpenMV与单片机串口通信问题</title>
+    <url>/2020/02/19/Openmv-stm32/</url>
+    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="/2020/02/19/Openmv-stm32/20190423133929_vpytt.jpg" alt></p>
+<a id="more"></a>
+
+<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="/2020/02/19/Openmv-stm32/7a2ca28c-01e3-11e9-bf67-00163e2e672a.jpg_t590.jpg" alt></p>
+<h3 id="1-串口管脚"><a href="#1-串口管脚" class="headerlink" title="1.串口管脚"></a>1.串口管脚</h3><p><strong>P4 TXD</strong></p>
+<p><strong>P5 RXD</strong></p>
+<h3 id="2-串口初始化"><a href="#2-串口初始化" class="headerlink" title="2.串口初始化"></a>2.串口初始化</h3><p>python下的代码很简单</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import time, pyb</span><br><span class="line">from pyb import UART</span><br><span class="line"></span><br><span class="line">uart &#x3D; UART(3, 115200, timeout_char&#x3D;1000)</span><br><span class="line"></span><br><span class="line">led_blue &#x3D; pyb.LED(3)&#x2F;&#x2F;这是自带的led，可以作为指示灯使用</span><br><span class="line">led_red &#x3D; pyb.LED(2)</span><br></pre></td></tr></table></figure>
+<h3 id="3-串口发送"><a href="#3-串口发送" class="headerlink" title="3.串口发送"></a>3.串口发送</h3><p>普通发送字符</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">uart.write(str)&#x2F;&#x2F;发送str字符串</span><br><span class="line">uart.write(&quot;abc&quot;)&#x2F;&#x2F;发送abc</span><br></pre></td></tr></table></figure>
+<p>发送整形数就要用到json</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x&#x3D;123</span><br><span class="line">y&#x3D;234</span><br><span class="line">str&#x3D;&#39;横坐标为&#39;+json.dumps(x)+&#39;纵坐标为&#39;+json.dumps(y)</span><br><span class="line">uart.write(str)</span><br></pre></td></tr></table></figure>
+<h3 id="4、串口接收"><a href="#4、串口接收" class="headerlink" title="4、串口接收"></a>4、串口接收</h3><p>例如利用串口控制两个小led</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if uart.any():</span><br><span class="line">        a&#x3D;uart.readline().decode()</span><br><span class="line">        print(a)&#x2F;&#x2F;打印到终端</span><br><span class="line">        if a&#x3D;&#x3D;&#39;abc&#39;:</span><br><span class="line">            led_blue.on()</span><br><span class="line">            led_red.off()</span><br><span class="line">        if a&#x3D;&#x3D;&#39;abd&#39;:</span><br><span class="line">            led_blue.off()</span><br><span class="line">            led_red.on()</span><br></pre></td></tr></table></figure>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>注意，供电不得使用3.3V接口</p>
+]]></content>
+  </entry>
+  <entry>
     <title>超声波模块HC-SR04四针通用延时驱动</title>
     <url>/2020/02/18/HC-SR04/</url>
     <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="/2020/02/18/HC-SR04/20130713232223-1245345432.jpg" alt></p>
