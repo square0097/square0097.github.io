@@ -111,24 +111,24 @@
   <meta name="description" content="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码本文记录了其串口通信的方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenMV与单片机串口通信问题">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/Openmv-stm32/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/19/OpenMV-stm32/index.html">
 <meta property="og:site_name" content="Square0097">
 <meta property="og:description" content="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码本文记录了其串口通信的方法">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/Openmv-stm32/20190423133929_vpytt.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/02/19/Openmv-stm32/7a2ca28c-01e3-11e9-bf67-00163e2e672a.jpg_t590.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32002.jpg">
 <meta property="article:published_time" content="2020-02-19T05:23:41.000Z">
-<meta property="article:modified_time" content="2020-02-19T06:09:50.055Z">
+<meta property="article:modified_time" content="2020-02-19T10:01:33.711Z">
 <meta property="article:author" content="Square0097">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/19/Openmv-stm32/20190423133929_vpytt.jpg">
+<meta name="twitter:image" content="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/19/Openmv-stm32/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/19/OpenMV-stm32/"/>
 
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/Openmv-stm32/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/OpenMV-stm32/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Square0097">
@@ -371,7 +371,7 @@
                 
               
 
-              <time title="创建时间：2020-02-19 13:23:41 / 修改时间：14:09:50" itemprop="dateCreated datePublished" datetime="2020-02-19T13:23:41+08:00">2020-02-19</time>
+              <time title="创建时间：2020-02-19 13:23:41 / 修改时间：18:01:33" itemprop="dateCreated datePublished" datetime="2020-02-19T13:23:41+08:00">2020-02-19</time>
             
 
             
@@ -417,10 +417,10 @@
       
 
       
-        <h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="/2020/02/19/Openmv-stm32/20190423133929_vpytt.jpg" alt></p>
+        <h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg" alt></p>
 <a id="more"></a>
 
-<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="/2020/02/19/Openmv-stm32/7a2ca28c-01e3-11e9-bf67-00163e2e672a.jpg_t590.jpg" alt></p>
+<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32002.jpg" alt></p>
 <h3 id="1-串口管脚"><a href="#1-串口管脚" class="headerlink" title="1.串口管脚"></a>1.串口管脚</h3><p><strong>P4 TXD</strong></p>
 <p><strong>P5 RXD</strong></p>
 <h3 id="2-串口初始化"><a href="#2-串口初始化" class="headerlink" title="2.串口初始化"></a>2.串口初始化</h3><p>python下的代码很简单</p>

@@ -1837,7 +1837,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #49ff4b;
+  background: #e7d01d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3106,7 +3106,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("/images/background.jpg");
+  background: url("http://q5y0th4yi.bkt.clouddn.com/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;

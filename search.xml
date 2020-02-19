@@ -3,7 +3,7 @@
   <entry>
     <title>Jlink修复更换低版本驱动与龙邱20针转接10针下载</title>
     <url>/2020/02/19/Jlink/</url>
-    <content><![CDATA[<h2 id="开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？"><a href="#开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？" class="headerlink" title="开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？"></a>开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接<br><img src="/2020/02/19/Jlink/thumb-1920-256566.jpg" alt></p>
+    <content><![CDATA[<h2 id="开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？"><a href="#开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？" class="headerlink" title="开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？"></a>开始学习龙邱K60，但是没有能直接下载的Jlink，有个Jlink还是不好使的怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink001.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、如何修复Jlink"><a href="#一、如何修复Jlink" class="headerlink" title="一、如何修复Jlink"></a>一、如何修复Jlink</h3><p>一般情况下可能是固件丢失，我们可以尝试重新刷写固件，如果设备管理器仍然识别不了，那就可能是硬件问题。</p>
 <h4 id="1-下载和安装烧录软件"><a href="#1-下载和安装烧录软件" class="headerlink" title="1.下载和安装烧录软件"></a>1.下载和安装烧录软件</h4><p>链接：<a href="https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA" target="_blank" rel="noopener">https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA</a><br>提取码：klzs</p>
@@ -18,11 +18,11 @@
 <li>断开<strong>USB</strong>再断开短接</li>
 </ul>
 <h4 id="3-刷写新的固件"><a href="#3-刷写新的固件" class="headerlink" title="3.刷写新的固件"></a>3.刷写新的固件</h4><ul>
-<li><p>连接<strong>USB</strong>,打开<strong>sam-ba.exe</strong>，可以看到有设备连接，点击<strong>Connect</strong>,如果没有<strong>Connect</strong>怎么办，可以往下拉一下窗口，可能是被挡住了<br><img src="/2020/02/19/Jlink/83284792479.JPG" alt></p>
+<li><p>连接<strong>USB</strong>,打开<strong>sam-ba.exe</strong>，可以看到有设备连接，点击<strong>Connect</strong>,如果没有<strong>Connect</strong>怎么办，可以往下拉一下窗口，可能是被挡住了<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink002.JPG" alt></p>
 </li>
-<li><p>选择<strong>Send File Name</strong>,找到文件中的V8固件，并点击<strong>Send File</strong><br><img src="/2020/02/19/Jlink/347829187492.JPG" alt></p>
+<li><p>选择<strong>Send File Name</strong>,找到文件中的V8固件，并点击<strong>Send File</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink003.JPG" alt></p>
 </li>
-<li><p>下面会出现两次询问窗口，第一次是是否解锁，我们选择<strong>Yes</strong>，第二次是是否锁定，我们选择<strong>No</strong><br><img src="/2020/02/19/Jlink/221343243524.JPG" alt><br>这一套操作下来V8固件重刷就完成了</p>
+<li><p>下面会出现两次询问窗口，第一次是是否解锁，我们选择<strong>Yes</strong>，第二次是是否锁定，我们选择<strong>No</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink004.JPG" alt><br>这一套操作下来V8固件重刷就完成了</p>
 </li>
 </ul>
 <h4 id="4-Keil5无法使用此Jlink"><a href="#4-Keil5无法使用此Jlink" class="headerlink" title="4.Keil5无法使用此Jlink"></a>4.Keil5无法使用此Jlink</h4><p>Keil5默认的Jlink驱动是很高版本的，我们需要替换成低版本的Jlink驱动。</p>
@@ -36,18 +36,18 @@
 </ul>
 <p>复制到<strong>keil5/ARM/Segger</strong>替换原文件</p>
 <p>完成后发现Jlink已经可以正常使用</p>
-<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="/2020/02/19/Jlink/%5B1C11A386NP4WV%5D%5BFF1365F.png" alt><br>这里<strong>RST</strong>接<strong>TRST_N</strong>即可</p>
-<p>我在Jlink内部连接好了下载线，在外壳上扣了一个洞方便插线<br><img src="/2020/02/19/Jlink/FA219BF1DF79BDF3F2E3CEF612B278F0.jpg" alt></p>
+<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink005.png" alt><br>这里<strong>RST</strong>接<strong>TRST_N</strong>即可</p>
+<p>我在Jlink内部连接好了下载线，在外壳上扣了一个洞方便插线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink006.jpg" alt></p>
 <h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>K60有发烫的毛病的时候千万不可一直插着电源</p>
 ]]></content>
   </entry>
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
-    <url>/2020/02/19/Openmv-stm32/</url>
-    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="/2020/02/19/Openmv-stm32/20190423133929_vpytt.jpg" alt></p>
+    <url>/2020/02/19/OpenMV-stm32/</url>
+    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg" alt></p>
 <a id="more"></a>
 
-<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="/2020/02/19/Openmv-stm32/7a2ca28c-01e3-11e9-bf67-00163e2e672a.jpg_t590.jpg" alt></p>
+<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32002.jpg" alt></p>
 <h3 id="1-串口管脚"><a href="#1-串口管脚" class="headerlink" title="1.串口管脚"></a>1.串口管脚</h3><p><strong>P4 TXD</strong></p>
 <p><strong>P5 RXD</strong></p>
 <h3 id="2-串口初始化"><a href="#2-串口初始化" class="headerlink" title="2.串口初始化"></a>2.串口初始化</h3><p>python下的代码很简单</p>
@@ -64,10 +64,10 @@
   <entry>
     <title>超声波模块HC-SR04四针通用延时驱动</title>
     <url>/2020/02/18/HC-SR04/</url>
-    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="/2020/02/18/HC-SR04/20130713232223-1245345432.jpg" alt></p>
+    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04001.jpg" alt></p>
 <a id="more"></a>
 
-<h2 id="一、模块简介"><a href="#一、模块简介" class="headerlink" title="一、模块简介"></a>一、模块简介</h2><p>超声波模块我们在很多领域都能得到应用<br><img src="/2020/02/18/HC-SR04/Gu38529855829fdd1527ddf8071289C3d2.jpg" alt><br>HC-SR04模块使用很简单，我们使用它来制作一些小设备完全足够。<br>我们一般的思路就是使用定时器，这样是非常准确的。</p>
+<h2 id="一、模块简介"><a href="#一、模块简介" class="headerlink" title="一、模块简介"></a>一、模块简介</h2><p>超声波模块我们在很多领域都能得到应用<br><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04002.jpg" alt><br>HC-SR04模块使用很简单，我们使用它来制作一些小设备完全足够。<br>我们一般的思路就是使用定时器，这样是非常准确的。</p>
 <h3 id="1-基本参数"><a href="#1-基本参数" class="headerlink" title="1.基本参数"></a>1.基本参数</h3><ul>
 <li>使用电压：DC—5V   </li>
 <li>静态电流：小于2mA       </li>
@@ -75,7 +75,7 @@
 <li>电平输出：底0V         </li>
 <li>感应角度：不大于15度    </li>
 <li>探测距离：2cm-450cm </li>
-<li>测量精度：可达0.2cm   <h3 id="2-时序"><a href="#2-时序" class="headerlink" title="2.时序"></a>2.时序</h3><img src="/2020/02/18/HC-SR04/sxt128493298.png" alt><h3 id="3-管脚"><a href="#3-管脚" class="headerlink" title="3.管脚"></a>3.管脚</h3></li>
+<li>测量精度：可达0.2cm   <h3 id="2-时序"><a href="#2-时序" class="headerlink" title="2.时序"></a>2.时序</h3><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04003.png" alt><h3 id="3-管脚"><a href="#3-管脚" class="headerlink" title="3.管脚"></a>3.管脚</h3></li>
 </ul>
 <table>
 <thead>
@@ -115,13 +115,13 @@
   <entry>
     <title>AT89C51RC/RD系列贴片与P4管脚的使用</title>
     <url>/2020/02/18/AT89C52/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="/2020/02/18/AT89C52/begin.jpg" alt></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="http://q5y0th4yi.bkt.clouddn.com/at89c52001.jpg" alt></p>
 <a id="more"></a>
 
 <h4 id="为啥突然想弄这个了呢"><a href="#为啥突然想弄这个了呢" class="headerlink" title="为啥突然想弄这个了呢"></a>为啥突然想弄这个了呢</h4><p>疫情发展得很迅速，快递全都躺在路上了，补番补得头疼，手头也没什么东西能玩的。看到在路上的51贴片里有P4这个管脚，但是我们51标准的头文件里没有P4管脚的相关定义，于是在家无聊的时间里研究了一下51贴片系列如何使用P4管脚。</p>
 <h2 id="一、AT89C51RC-RD系列贴片封装"><a href="#一、AT89C51RC-RD系列贴片封装" class="headerlink" title="一、AT89C51RC/RD系列贴片封装"></a>一、AT89C51RC/RD系列贴片封装</h2><p>首先我们来看一下他的尺寸，因为毕竟是贴片要打PCB板的，我也是在网上找了很久才找到弄好的封装，不然就要自己手画了。</p>
-<h3 id="1-尺寸"><a href="#1-尺寸" class="headerlink" title="1.尺寸"></a>1.尺寸</h3><p><img src="/2020/02/18/AT89C52/size1.png" alt><br>这是官方文件里51贴片的尺寸图，用来参考整体尺寸还可以，个人觉得管脚尺寸有一些出入。<br>我这里有弄好的51贴片AD封装，需要的加我QQ。</p>
-<h3 id="2-管脚"><a href="#2-管脚" class="headerlink" title="2.管脚"></a>2.管脚</h3><p><img src="/2020/02/18/AT89C52/51_ad3.png" alt></p>
+<h3 id="1-尺寸"><a href="#1-尺寸" class="headerlink" title="1.尺寸"></a>1.尺寸</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/at89c52002.png" alt><br>这是官方文件里51贴片的尺寸图，用来参考整体尺寸还可以，个人觉得管脚尺寸有一些出入。<br>我这里有弄好的51贴片AD封装，需要的加我QQ。</p>
+<h3 id="2-管脚"><a href="#2-管脚" class="headerlink" title="2.管脚"></a>2.管脚</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/at89c52003.png" alt></p>
 <p>官方文档里给出的管脚图，我在网上找到的封装里是没有写P4管脚的，写的都是NC，所以要是想使用P4管脚就看这个管脚图吧。</p>
 <h2 id="二、P4管脚的功能"><a href="#二、P4管脚的功能" class="headerlink" title="二、P4管脚的功能"></a>二、P4管脚的功能</h2><p>同样我们还是在官方文档里找，我找了半天，文件页数太多了…<br>其他管脚的功能和直插版的普通芯片是一样的。</p>
 <table>
