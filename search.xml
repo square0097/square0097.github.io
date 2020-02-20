@@ -43,7 +43,7 @@
   </entry>
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
-    <url>/2020/02/19/OpenMV-stm32/</url>
+    <url>/2020/02/19/Openmvstm32/</url>
     <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg" alt></p>
 <a id="more"></a>
 
