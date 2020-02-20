@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="在刚接触51单片机的时候觉得这是很难的事情记录蓝牙小车的制作过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何制作一台多功能循迹蓝牙遥控小车">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/car/index.html">
+<meta property="og:site_name" content="Square0097">
+<meta property="og:description" content="在刚接触51单片机的时候觉得这是很难的事情记录蓝牙小车的制作过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car001.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car002.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car002_0.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car003.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car004.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car005.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car006.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car007.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car008.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car009.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car010.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/car011.jpg">
+<meta property="article:published_time" content="2020-02-20T09:20:15.000Z">
+<meta property="article:modified_time" content="2020-02-20T09:30:43.065Z">
+<meta property="article:author" content="Square0097">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q5y0th4yi.bkt.clouddn.com/car001.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/20/car/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>如何制作一台多功能循迹蓝牙遥控小车 | Square0097</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Square0097</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">STM32与51单片机开发</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+    <a href="/sitemap/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />资料整理</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/car/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Square0097">
+      <meta itemprop="description" content="总想合伙搞点事情">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Square0097">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何制作一台多功能循迹蓝牙遥控小车
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+ 
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-20 17:20:15 / 修改时间：17:30:43" itemprop="dateCreated datePublished" datetime="2020-02-20T17:20:15+08:00">2020-02-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="在刚接触51单片机的时候觉得这是很难的事情"><a href="#在刚接触51单片机的时候觉得这是很难的事情" class="headerlink" title="在刚接触51单片机的时候觉得这是很难的事情"></a>在刚接触51单片机的时候觉得这是很难的事情</h2><p>记录蓝牙小车的制作过程<br><img src="http://q5y0th4yi.bkt.clouddn.com/car001.jpg" alt></p>
+<a id="more"></a>
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>不要觉得它很难，就像在做一个玩具一样。蓝牙小车对于初学者是道坎，pwm调速这个就难到了很多人，其实这些都不难。</p>
+<h3 id="二、什么是pwm调速"><a href="#二、什么是pwm调速" class="headerlink" title="二、什么是pwm调速"></a>二、什么是pwm调速</h3><p>网上是这么说的：</p>
+<p><strong>PWM(Pulse Width Modulation)控制——脉冲宽度调制技术，通过对一系列脉冲的宽度进行调制，来等效地获得所需要波形(含形状和幅值)。</strong></p>
+<p>但其实我们只需要记住两个词：<br><strong>周期</strong>和<strong>占空比</strong></p>
+<p>在调速这方面，控制pwm就相当于控制你多长时间手动按一次按键和你每次按下按键的时长，来控制一只led。pwm的<strong>周期</strong>就是你按下按键的间隔，<strong>占空比</strong>就是你按下的时间。</p>
+<ul>
+<li><p>如果你每隔1秒按下一次，并且按下的时间为0.5秒，那么人眼可以看到led是在闪烁的状态。</p>
+</li>
+<li><p>如果你操作够快，达到ms级别，那么人眼是看不出来你每隔10ms按下一次且每次按下5ms，这时候可以用一个一直通电的led和你控制的led做对比，你会发现你控制的led亮度大约是一直通电的1/2。</p>
+</li>
+<li><p>如果你改变了按下的时间，周期不变，例如你只有2ms的时间按下，你会发现这比5ms按下更暗，而且大约是一直通电亮度的1/5。</p>
+</li>
+</ul>
+<p>如果把led换成电机，那么你就完成了调速，速度就是亮度，他们都是看你pwm波的有效值。也可以理解成电阻，通电时间也就是按下时间越长，发热量越大。<br><img src="http://q5y0th4yi.bkt.clouddn.com/car002.jpg" alt><br>也就是说你控制的设备输出的功率就是pwm的占空比，占空比为50%的话，输出也就是最大功率的1/2。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;reg52.h&quot;</span><br><span class="line">#include &quot;intrins.h&quot;</span><br><span class="line">sbit out1&#x3D;P2^0;</span><br><span class="line">sbit out2&#x3D;P2^1;</span><br><span class="line">sbit out3&#x3D;P2^2;</span><br><span class="line">sbit out4&#x3D;P2^3;&#x2F;&#x2F;四个输出</span><br><span class="line"></span><br><span class="line">int n,speed1,speed2,speed3,speed4;</span><br><span class="line">void InitTimer0(void)&#x2F;&#x2F;定时器初始化，这里设定了1ms定时</span><br><span class="line">&#123;</span><br><span class="line">    TMOD &#x3D; 0x01;</span><br><span class="line">    TH0 &#x3D; 0x0FC;</span><br><span class="line">    TL0 &#x3D; 0x18;</span><br><span class="line">    EA &#x3D; 1;</span><br><span class="line">    ET0 &#x3D; 1;</span><br><span class="line">    TR0 &#x3D; 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	InitTimer0();	</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		speed1&#x3D;20;</span><br><span class="line">		speed2&#x3D;50;</span><br><span class="line">		speed3&#x3D;70;</span><br><span class="line">		speed4&#x3D;90;&#x2F;&#x2F;设定四个输出的占空比</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void Timer0Interrupt(void) interrupt 1</span><br><span class="line">&#123;</span><br><span class="line">    TH0 &#x3D; 0x0FC;</span><br><span class="line">    TL0 &#x3D; 0x18;</span><br><span class="line">    n++;</span><br><span class="line">	if(n&#x3D;&#x3D;100)&#x2F;&#x2F;设定周期100ms</span><br><span class="line">		n&#x3D;0;</span><br><span class="line">	if(n&lt;speed1)</span><br><span class="line">		out1&#x3D;1;</span><br><span class="line">	else</span><br><span class="line">		out1&#x3D;0;</span><br><span class="line">	if(n&lt;speed2)</span><br><span class="line">		out2&#x3D;1;</span><br><span class="line">	else</span><br><span class="line">		out2&#x3D;0;</span><br><span class="line">	if(n&lt;speed3)</span><br><span class="line">		out3&#x3D;1;</span><br><span class="line">	else</span><br><span class="line">		out3&#x3D;0;</span><br><span class="line">	if(n&lt;speed4)</span><br><span class="line">		out4&#x3D;1;</span><br><span class="line">	else</span><br><span class="line">		out4&#x3D;0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://q5y0th4yi.bkt.clouddn.com/car002_0.JPG" alt><br>这里我们可以看到四个输出pwm明显的区别，20%，50%，70%，90%。</p>
+<h3 id="三、如何驱动电机"><a href="#三、如何驱动电机" class="headerlink" title="三、如何驱动电机"></a>三、如何驱动电机</h3><p>仅仅靠单片机的io口输出的电流来控制电机是远远不够的</p>
+<p>51单片机io口输入电流限制在10ma左右，输出电流在10ua左右，加上拉电阻也只能达到20ma左右，这并不足以驱动需要较大电流的电机。</p>
+<p>这个时候我们就需要使用电机驱动模块。</p>
+<p>电机驱动模块也有很多种，一般驱动小减速电机我们可以使用L298N系列的驱动模块，如果驱动较大的减速电机我们就要使用mos管驱动。</p>
+<p><img src="http://q5y0th4yi.bkt.clouddn.com/car003.jpg" alt></p>
+<p>这是我们最常用的L298N电机驱动模块，使用很简单<br><img src="http://q5y0th4yi.bkt.clouddn.com/car004.jpg" alt></p>
+<p>也有这种体积较小的L298N，但是他的使用比较严格，电压不得超过10V，安装也不是很方便，初学者不建议使用。</p>
+<p>我们还是来看第一种体积比较大的L298N</p>
+<table>
+<thead>
+<tr>
+<th>管脚</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VCC</td>
+<td align="left">12V电源接口</td>
+</tr>
+<tr>
+<td>GND</td>
+<td align="left">接地</td>
+</tr>
+<tr>
+<td>5V</td>
+<td align="left">12V转5V的输出接口，单片机可以用这个5V供电</td>
+</tr>
+<tr>
+<td>ENA，ENB</td>
+<td align="left">调速管脚，不需要调速时短接</td>
+</tr>
+<tr>
+<td>IN1-4</td>
+<td align="left">电机方向控制</td>
+</tr>
+</tbody></table>
+<h4 id="1-电源和接地"><a href="#1-电源和接地" class="headerlink" title="1.电源和接地"></a>1.电源和接地</h4><ul>
+<li>VCC可以使用12V航模电池或2-3节18650电池供电。</li>
+<li>5V可以给单片机和其他5V设备供电。</li>
+<li>GND是共地，很多初学者会忘记将单片机和驱动模块共地，导致不能控制</li>
+</ul>
+<h4 id="2-方向控制管脚"><a href="#2-方向控制管脚" class="headerlink" title="2.方向控制管脚"></a>2.方向控制管脚</h4><p>in1,in2,in3,in4控制两端电机，in1和in2控制其左端输出，in3和in4控制其右端输出。</p>
+<p>以控制左端为例，我们可以将in1和in2理解为电动势，如果in1和in2都为0或1，没有产生电势差，此时也就没有电流输出。</p>
+<p>如果in1为0，in2为1，产生了电动势，此时输出端输出电流，可以观察电机转向，反之in1为1，in2为0，则电机与刚才相比反转。</p>
+<p>右端同理，就是控制输出端电流方向。</p>
+<h4 id="3-调速管脚"><a href="#3-调速管脚" class="headerlink" title="3.调速管脚"></a>3.调速管脚</h4><p>如果不需要调速，那么就不用拔掉短接冒，此时调速管脚接的是高电平，也就是100%的占空比信号，电机全速转动。</p>
+<p>如果需要调速，那么拔掉短接冒，和in1-4同排的管脚是你需要和单片机相连的管脚，此时你可以在ENA或ENB上给予pwm信号，它的速度是百分之几就等于你的占空比。</p>
+<h4 id="4-输出"><a href="#4-输出" class="headerlink" title="4.输出"></a>4.输出</h4><p>每个L298N有两个输出，能控制两侧电机。如果我们制作四轮小车，个人还是建议使用一个L298N，一侧控制两个电机，这样可以避免因为L298N的性能问题，导致前后轮出现速度不同的现象。</p>
+<h4 id="5-为什么要用减速电机"><a href="#5-为什么要用减速电机" class="headerlink" title="5.为什么要用减速电机"></a>5.为什么要用减速电机</h4><p>减速电机内部是一个普通的马达，不同减速电机内部构造不同，但都是一个原理：<br><strong>牺牲距离增加做功</strong></p>
+<p>其内部是减速齿轮组，夸张的说，马达转10圈时可能外部才转一圈，这样减速电机的力气更大，更重要的是这样更加容易控制速度，我们控制马达转一周很难，但我们粗略的控制它转100圈左右更加容易，所以我们控制减速电机的行驶速度和距离也就更加的容易。</p>
+<h3 id="四、循迹"><a href="#四、循迹" class="headerlink" title="四、循迹"></a>四、循迹</h3><p>循迹是作为智能小车的一大重点，在地上铺设白底黑线，小车就能够沿着黑线行驶，这是怎么做到的呢？<br>我们这里就需要使用循迹模块。</p>
+<p><img src="http://q5y0th4yi.bkt.clouddn.com/car005.jpg" alt></p>
+<p>循迹模块也是需要VCC接5V，GND接地，还有两个管脚一个AO一个DO，我们使用DO管脚就可以，AO是AD输出暂时用不到。</p>
+<p><strong>原理</strong>：利用了在不同的颜色下红外反射强度不同，比如在白色条件下，红外线很容易就反射回来，黑色条件下，红外线会被黑色吸收而无法返回，这样就区分出了两种颜色。</p>
+<p><strong>蓝色电位器</strong>是用来调节检测的颜色，在比赛前的调试过程中必不可少的就是调节电位器，让其明显区分出循迹线和底板。</p>
+<p>循迹模块的数量可以根据实际情况而定。</p>
+<h4 id="1-二路循迹"><a href="#1-二路循迹" class="headerlink" title="1.二路循迹"></a>1.二路循迹</h4><p>二路循迹比较简单，有两种编程思路。</p>
+<h5 id="第一种：鬼畜式纯电路循迹（自己起的名字）"><a href="#第一种：鬼畜式纯电路循迹（自己起的名字）" class="headerlink" title="第一种：鬼畜式纯电路循迹（自己起的名字）"></a>第一种：鬼畜式纯电路循迹（自己起的名字）</h5><p>不常用性能也不好，不需要芯片控制</p>
+<p>这种循迹只需要控制左右转或者差速转向，也就是两侧车轮没有同速直线行驶的情况。<br>本人做的第一个循迹小车就是这种循迹方式，简答纯电路就可以驱动。</p>
+<p>常常适用于两个后轮驱动，前方一个万向轮的三轮小车。<br><img src="http://q5y0th4yi.bkt.clouddn.com/car006.jpg" alt><br>** 思路**：前方两个循迹模块，控制继电器即可。一旦左侧检测到黑线，证明车体方向偏右，就需要向左转，这时候左轮不动，右轮前进。一旦右侧检测到黑线，证明车体方向偏左，就需要向右转，右轮不动左轮前进。这时候我们看到的结果就是小车在左右摇摆着沿着黑线行驶。</p>
+<h5 id="第二种：简单二路的循迹"><a href="#第二种：简单二路的循迹" class="headerlink" title="第二种：简单二路的循迹"></a>第二种：简单二路的循迹</h5><p>这是我们最常用的一种二路循迹，性能较好，适用于全部车型。<br><img src="http://q5y0th4yi.bkt.clouddn.com/car007.jpg" alt><br>两个循迹模块之间的距离稍稍大于循迹线宽即可。</p>
+<ul>
+<li>当左侧检测到黑线，车体左转。</li>
+<li>当右侧检测到黑线，车体右转</li>
+<li>当左右都没有检测到黑线时，证明黑线在两个模块之间，车体前进（暂不考虑冲出轨道的情况）</li>
+</ul>
+<h4 id="2-三路循迹"><a href="#2-三路循迹" class="headerlink" title="2.三路循迹"></a>2.三路循迹</h4><p>三路循迹与二路相比更加准确，一般用于直角转弯或者精度较高的情况。<br>和二路循迹一样，两侧模块用来检测车体偏左还是偏右，可以当中间的模块检测到黑线时才开始前进。</p>
+<p><img src="http://q5y0th4yi.bkt.clouddn.com/car008.jpg" alt></p>
+<p>直角转弯时，黑线不会在两侧的模块以内，这时候就需要在黑线接近时，可用中间模块判断车体是否准确的对准了黑线。</p>
+<h4 id="3-直角弯循迹"><a href="#3-直角弯循迹" class="headerlink" title="3.直角弯循迹"></a>3.直角弯循迹</h4><p>有些时候我们需要走一个直角弯，这个时候我们就需要在车体两侧加装循迹模块。<br><img src="http://q5y0th4yi.bkt.clouddn.com/car009.jpg" alt><br>两侧模块用来检测是否到达了直角弯，一旦检测到黑线，就原地转向。</p>
+<h4 id="4-差速行驶"><a href="#4-差速行驶" class="headerlink" title="4.差速行驶"></a>4.差速行驶</h4><p>循迹的过过程中，要想保证速度或经过S弯等情况下，就需要使用差速。</p>
+<p>差速就是两侧车轮同向转动但是速度不同，这样的效果就是小车实现S形走位，也可以实现在高速行驶的情况下微调方向。</p>
+<h4 id="5-PID算法"><a href="#5-PID算法" class="headerlink" title="5.PID算法"></a>5.PID算法</h4><p>比较高级的循迹可以用到<strong>PID</strong>算法，使用差速来校准方向，但这种方法比较难用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">struct _pid </span><br><span class="line">&#123;</span><br><span class="line">	float ExpectedValue;&#x2F;&#x2F;定义设定值</span><br><span class="line">	float ActualValue;&#x2F;&#x2F;定义实际值</span><br><span class="line">	float err;&#x2F;&#x2F;定义偏差值</span><br><span class="line">	float err_last;&#x2F;&#x2F;定义上一个偏差值</span><br><span class="line">	float err_prev;&#x2F;&#x2F;定义前一个的偏差值</span><br><span class="line">	float Kp, Ki, Kd;&#x2F;&#x2F;定义比例、积分、微分系数</span><br><span class="line">&#125;pid;</span><br><span class="line"> </span><br><span class="line">void PID_Init()</span><br><span class="line">&#123;</span><br><span class="line">	pid.ExpectedValue &#x3D; 0.0;</span><br><span class="line">	pid.ActualValue &#x3D; 0.0;</span><br><span class="line">	pid.err &#x3D; 0.0;</span><br><span class="line">	pid.err_prev &#x3D; 0.0;</span><br><span class="line">	pid.err_last &#x3D; 0.0;</span><br><span class="line">	pid.Kp &#x3D; 0.4;</span><br><span class="line">	pid.Ki &#x3D; 0.2;</span><br><span class="line">	pid.Kd &#x3D; 0.0;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">float PID_Realize(float speed) &#123;</span><br><span class="line">	float index;</span><br><span class="line">	pid.ExpectedValue &#x3D; speed;</span><br><span class="line">	pid.err &#x3D; pid.ExpectedValue - pid.ActualValue;</span><br><span class="line">	&#x2F;&#x2F;增量式pid公式</span><br><span class="line">	float incrementValue &#x3D; pid.Kp*(pid.err - pid.err_last) + pid.Ki*pid.err + pid.Kd*(pid.err - 2 * pid.err_last + pid.err_prev);</span><br><span class="line">	pid.ActualValue +&#x3D; incrementValue;</span><br><span class="line">	pid.err_prev &#x3D; pid.err_last;</span><br><span class="line">	pid.err_last &#x3D; pid.err;</span><br><span class="line">	return pid.ActualValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="五、扩展功能"><a href="#五、扩展功能" class="headerlink" title="五、扩展功能"></a>五、扩展功能</h3><h4 id="1、遥控"><a href="#1、遥控" class="headerlink" title="1、遥控"></a>1、遥控</h4><p>遥控可以有很多方案：</p>
+<ul>
+<li>蓝牙串口</li>
+<li>JDY-40</li>
+<li>nrf2401</li>
+<li>WIFI</li>
+</ul>
+<p>用51单片机的就可以使用蓝牙和JDY-40。</p>
+<p>蓝牙模块可以实现手机控制，手机下载蓝牙串口调试软件，和蓝牙模块配对即可。</p>
+<p>JDY-40，可以使用另一个51芯片来控制。</p>
+<p><strong>注意：JDY-40供电电压严格要求3.3V，可以使用稳压芯片转换电压。</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/car010.jpg" alt><br>使用串口遥控时，单片机要注意更换<strong>11.0592M晶振</strong>，尽量使用9600或115200的波特率，例如JDY-40的初始波特率为9600。<br>如果在调试过程中出现了乱码，那么首先就要确认两个设备的波特率是否相同，以及<strong>RXD</strong>和<strong>TXD</strong>是否连接正确。</p>
+<p>发送的数据使用十六进制即可，例如0x01。</p>
+<h4 id="2、舵机"><a href="#2、舵机" class="headerlink" title="2、舵机"></a>2、舵机</h4><p>舵机可以搭载超声波，摄像头等。可以在车辆上制作一个二轴云台，并实现控制。<br><img src="http://q5y0th4yi.bkt.clouddn.com/car011.jpg" alt></p>
+<p>我们比较常用的sg90，相比金属舵机肯定是微不足道，但是它的性能足以让我们做一些小型的开发。</p>
+<p>它的控制原理和pwm调速相似，但是它的周期是固定的。</p>
+<p>舵机驱动的<strong>周期是20ms</strong>，<strong>占空比为0.5-2.5ms</strong>,也就是0-180度。</p>
+<table>
+<thead>
+<tr>
+<th>时间(ms)</th>
+<th align="left">角度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.5</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td align="left">45</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td align="left">90</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td align="left">135</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td align="left">180</td>
+</tr>
+</tbody></table>
+<p>当然它的角度是线性变化的，并非固定只有5个角度。</p>
+<h4 id="3、同时使用串口和定时器"><a href="#3、同时使用串口和定时器" class="headerlink" title="3、同时使用串口和定时器"></a>3、同时使用串口和定时器</h4><p>这里需要将<strong>TMOD</strong>改为<strong>0X21</strong></p>
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void TimeInit()&#x2F;&#x2F;定时器和串口同时初始化</span><br><span class="line">&#123;</span><br><span class="line">	SCON&#x3D;0X50;		</span><br><span class="line">	TMOD|&#x3D;0X21;		</span><br><span class="line">	PCON&#x3D;0X80;			</span><br><span class="line">	TH1 &#x3D; 0xF3;</span><br><span class="line">    TL1 &#x3D; TH1;</span><br><span class="line">    TR1&#x3D;1;	</span><br><span class="line">    TH0 &#x3D; 0x0FF;</span><br><span class="line">    TL0 &#x3D; 0x9C;</span><br><span class="line">    ET0 &#x3D; 1;</span><br><span class="line">    TR0 &#x3D; 1;</span><br><span class="line">	ES&#x3D;1;					</span><br><span class="line">	EA&#x3D;1;						</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、超声波避障等"><a href="#4、超声波避障等" class="headerlink" title="4、超声波避障等"></a>4、超声波避障等</h4><p>可以看本站关于超声波的文章</p>
+<p>超声波模块HC-SR04四针通用延时驱动:<br><a href="https://square0097.github.io/2020/02/18/HC-SR04/" target="_blank" rel="noopener">https://square0097.github.io/2020/02/18/HC-SR04/</a></p>
+<p>超声可以实现避障和倒车自停功能。</p>
+<h4 id="5、常见故障问题解决"><a href="#5、常见故障问题解决" class="headerlink" title="5、常见故障问题解决"></a>5、常见故障问题解决</h4><h5 id="1-在进行停车或起步等一些动作时，出现重启现象"><a href="#1-在进行停车或起步等一些动作时，出现重启现象" class="headerlink" title="1.在进行停车或起步等一些动作时，出现重启现象**"></a>1.在进行停车或起步等一些动作时，出现重启现象**</h5><p>这里是因为电机在启动或停止瞬间电流消耗过大，引起的单片机电流不足断电，导致重启。</p>
+<p><strong>解决方法</strong>：在单片机的VCC和GND之间加一个电容即可，容值越大效果越好。</p>
+<h5 id="2-舵机运行时导致重启"><a href="#2-舵机运行时导致重启" class="headerlink" title="2.舵机运行时导致重启"></a>2.舵机运行时导致重启</h5><p>同样是耗电的原因，舵机的耗电相比电机要高，所以这里建议单独为舵机供电。</p>
+<p><strong>解决办法</strong>：外加3.7V电池为舵机供电，注意共地。</p>
+<h3 id="六、END"><a href="#六、END" class="headerlink" title="六、END"></a>六、END</h3><p>暂时就总结这么多，希望能对大家有所帮助！</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/19/Jlink/" rel="next" title="Jlink修复更换低版本驱动与龙邱20针转接10针下载">
+                <i class="fa fa-chevron-left"></i> Jlink修复更换低版本驱动与龙邱20针转接10针下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Square0097" />
+            
+              <p class="site-author-name" itemprop="name">Square0097</p>
+              <p class="site-description motion-element" itemprop="description">总想合伙搞点事情</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/square0097" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:1335621150@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Python树莓派相关
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://jeffjiang.top" title="jackistom" target="_blank">jackistom</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在刚接触51单片机的时候觉得这是很难的事情"><span class="nav-number">1.</span> <span class="nav-text">在刚接触51单片机的时候觉得这是很难的事情</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、前言"><span class="nav-number">1.1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、什么是pwm调速"><span class="nav-number">1.2.</span> <span class="nav-text">二、什么是pwm调速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、如何驱动电机"><span class="nav-number">1.3.</span> <span class="nav-text">三、如何驱动电机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-电源和接地"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.电源和接地</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-方向控制管脚"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.方向控制管脚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-调速管脚"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.调速管脚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-输出"><span class="nav-number">1.3.4.</span> <span class="nav-text">4.输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-为什么要用减速电机"><span class="nav-number">1.3.5.</span> <span class="nav-text">5.为什么要用减速电机</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、循迹"><span class="nav-number">1.4.</span> <span class="nav-text">四、循迹</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-二路循迹"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.二路循迹</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一种：鬼畜式纯电路循迹（自己起的名字）"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">第一种：鬼畜式纯电路循迹（自己起的名字）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二种：简单二路的循迹"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">第二种：简单二路的循迹</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-三路循迹"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.三路循迹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-直角弯循迹"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.直角弯循迹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-差速行驶"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.差速行驶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-PID算法"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.PID算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、扩展功能"><span class="nav-number">1.5.</span> <span class="nav-text">五、扩展功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、遥控"><span class="nav-number">1.5.1.</span> <span class="nav-text">1、遥控</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、舵机"><span class="nav-number">1.5.2.</span> <span class="nav-text">2、舵机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、同时使用串口和定时器"><span class="nav-number">1.5.3.</span> <span class="nav-text">3、同时使用串口和定时器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、超声波避障等"><span class="nav-number">1.5.4.</span> <span class="nav-text">4、超声波避障等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、常见故障问题解决"><span class="nav-number">1.5.5.</span> <span class="nav-text">5、常见故障问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-在进行停车或起步等一些动作时，出现重启现象"><span class="nav-number">1.5.5.1.</span> <span class="nav-text">1.在进行停车或起步等一些动作时，出现重启现象**</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-舵机运行时导致重启"><span class="nav-number">1.5.5.2.</span> <span class="nav-text">2.舵机运行时导致重启</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、END"><span class="nav-number">1.6.</span> <span class="nav-text">六、END</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Square0097</span>
+
+  
+
+  
+</div>
+
+
+
+
+  
+
+
+
+  <span class="post-meta-divider"> </span>
+
+
+
+  <div class="theme-info"></div>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+</body>
+</html>
