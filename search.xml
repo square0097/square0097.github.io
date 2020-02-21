@@ -190,11 +190,13 @@
 </ul>
 <p>复制到<strong>keil5/ARM/Segger</strong>替换原文件</p>
 <p>完成后发现Jlink已经可以正常使用</p>
-<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink005.png" alt><br>这里<strong>RST</strong>接<strong>TRST_N</strong>即可</p>
+<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink005.png" alt><br>这里<strong>RST</strong>接<strong>SRST_N</strong>即可</p>
 <p>我在Jlink内部连接好了下载线，在外壳上扣了一个洞方便插线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink006.jpg" alt></p>
 <h3 id="三、STM32C8T6怎样使用Jlink下载？"><a href="#三、STM32C8T6怎样使用Jlink下载？" class="headerlink" title="三、STM32C8T6怎样使用Jlink下载？"></a>三、STM32C8T6怎样使用Jlink下载？</h3><p>这个接不方便做出标准的外接口，因为A13、A14引脚并未在普通管脚中引出，不过可以将4针焊下替换成40针同向的向下排针，方便插在洞洞板上。</p>
 <p><img src="http://q5y0th4yi.bkt.clouddn.com/Jlink007.jpg" alt></p>
 <p>也可以使用龙邱K60下载接口，PB4的JTRST可不接，不影响下载。</p>
+<p><img src="http://q5y0th4yi.bkt.clouddn.com/jlink008.png" alt></p>
+<p><strong>注意</strong> ：JTAG上靠近VCC的的 <strong>nTRST</strong> 不可接C8T6的RST。</p>
 <h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>K60有发烫的毛病的时候千万不可一直插着电源</p>
 ]]></content>
   </entry>
