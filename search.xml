@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何使用VC++6.0 MFC制作串口上位机</title>
+    <url>/2020/02/22/hostcomputer/</url>
+    <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0001.jpg" alt></p>
+<a id="more"></a>
+<h2 id="一、为什么使用VC6"><a href="#一、为什么使用VC6" class="headerlink" title="一、为什么使用VC6"></a>一、为什么使用VC6</h2><p>VC6虽然是比较老的编程软件，但是他的性能很好，功能齐全，操作简单，可以完成windows系统下很多的功能，比如串口通信，网络通信等等。现在的VS虽然比VC6性能好得多，但是低配电脑基本上很卡，不建议低配电脑使用，我就是。</p>
+<h2 id="二、VC6的安装"><a href="#二、VC6的安装" class="headerlink" title="二、VC6的安装"></a>二、VC6的安装</h2><p>这里有一个<a href="https://wap.qidian.qq.com/ol/rest/view/2852150155_10207_1_1551343393?from=singlemessage" target="_blank" rel="noopener">微信上的安装教程</a></p>
+<h2 id="三、MFC的工程建立和编译"><a href="#三、MFC的工程建立和编译" class="headerlink" title="三、MFC的工程建立和编译"></a>三、MFC的工程建立和编译</h2><h3 id="1、工程建立"><a href="#1、工程建立" class="headerlink" title="1、工程建立"></a>1、工程建立</h3><ul>
+<li>点击文件，新建，输入工程名（注意不可以使用中文），点击<strong>MFC AppWizard[exe]</strong>后确定。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0003.jpg" alt><br>建立基本对话框<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0004.jpg" alt><br>之后会提示你工程的相关信息，确认即可。</li>
+</ul>
+<h3 id="2、编译"><a href="#2、编译" class="headerlink" title="2、编译"></a>2、编译</h3><p>编译运行和常规的方式一样。</p>
+<p>如果我们想让电脑里没有安装VC6的人运行我们制作的MFC程序的话，我们需要在<strong>工程</strong>，<strong>设置</strong> 中，将<strong>使用MFC作为共享的DLL</strong>改为<strong>使用MFC作为静态链接库</strong>，这样我们就可以让其他电脑运行MFC的窗口程序，这就是在可执行文件中加入了MFC的运行库。</p>
+<p>但根据情况而定，这样会让你的exe增到10MB左右。</p>
+<h3 id="打开工程"><a href="#打开工程" class="headerlink" title="打开工程"></a>打开工程</h3><p>我们要注意的是打开工程一定要点击 <strong>打开工作空间</strong> ，因为点击打开会出现闪退现象！原因未知…</p>
+<h2 id="四、窗口控件的使用"><a href="#四、窗口控件的使用" class="headerlink" title="四、窗口控件的使用"></a>四、窗口控件的使用</h2><h3 id="1、窗口控件的插入"><a href="#1、窗口控件的插入" class="headerlink" title="1、窗口控件的插入"></a>1、窗口控件的插入</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0005.jpg" alt><br>在工作区的右侧我们可以看到这样的一个工具栏，我妈可以添加需要的空间到窗口上，同样窗口上的多余内容我们可以删掉。</p>
+<h3 id="2、具体的控件使用方法"><a href="#2、具体的控件使用方法" class="headerlink" title="2、具体的控件使用方法"></a>2、具体的控件使用方法</h3><p>如果你找不到你的窗口界面了，那么请打开左侧栏的<strong>ResourceView</strong>中的<strong>Dialog</strong>。</p>
+<h4 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h4><p>按钮的名称在其右键属性中更改，标题即为显示的名称。</p>
+<p>双击按钮，出现对话框，这里是让用户设定按钮时间函数的名称，可以默认为其ID，也可以自行设置为 <strong>“On…”</strong> 的格式。</p>
+<p>命名后自动跳转到了按钮事件函数,如</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void CHostcomputerDlg::OnButton2() </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your control notification handler code here</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果窗口上按钮很多，命名无法找到相应函数时可以双击窗口按钮来编辑程序。</p>
+<p>按钮事件函数我们可以理解成单片机中的中断函数，程序执行过程中只要按下按钮就会执行这个函数。</p>
+<h4 id="静态文本和组框"><a href="#静态文本和组框" class="headerlink" title="静态文本和组框"></a>静态文本和组框</h4><p>这两个就很简单了，直接放置到窗口上，右键属性，在标题中修改要显示的内容。</p>
+<h4 id="编辑框"><a href="#编辑框" class="headerlink" title="编辑框"></a>编辑框</h4><p>编辑框可以作为显示窗口使用，也可作为输入框。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0006.jpg" alt></p>
+<ul>
+<li>如果横向文字很多，那么可选择水平滚动，以方便查看横向，如果编辑框宽度够用那么就不用改横向的属性。</li>
+<li>作为上位机我们显示数据可以是一行一行的显示，这时候就要使用垂直和自动垂直滚动，这样更新的数据就会逐行在这里显示。</li>
+<li>我们可以使用类的方式也可以不使用，这里列举输入不用类，输出使用类的方式。</li>
+</ul>
+<h5 id="编辑框作为输入"><a href="#编辑框作为输入" class="headerlink" title="编辑框作为输入"></a>编辑框作为输入</h5><p>这里我们就要引入一种类 <strong>CString</strong>，它不是一种数据类型也不是C++中的标准库，在MFC中普遍使用，可以说是非常的方便。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CString str;</span><br><span class="line">GetDlgItem(IDC_EDIT1)-&gt;GetWindowText(str);</span><br></pre></td></tr></table></figure>
+<p>这里的<strong>IDC_EDIT1</strong>是编辑框的ID，此时编辑框中的内容已经存到了<strong>str</strong>中。</p>
+<h5 id="编辑框作为显示"><a href="#编辑框作为显示" class="headerlink" title="编辑框作为显示"></a>编辑框作为显示</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_edit1.SetSel(-1);&#x2F;&#x2F;使用一次就行，代表可以使用\r\n分行</span><br><span class="line">m_edit1.ReplaceSel(&quot;abcdefg&quot;);&#x2F;&#x2F;显示字符串</span><br><span class="line">m_edit1.ReplaceSel(out);&#x2F;&#x2F;显示变量（char或CString）</span><br><span class="line">m_edit1.ReplaceSel(&quot;\r\n&quot;);&#x2F;&#x2F;换行</span><br></pre></td></tr></table></figure>
+<p>这里的<strong>m_edit1</strong>并不是ID，而是类。那么如何建立类向导呢？</p>
+<ul>
+<li>窗体任意位置右键</li>
+<li>建立类向导</li>
+<li>Member Variables<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0007.jpg" alt></li>
+<li>点击Add Variable…为IDC_EDIT1这个编辑框建立一个类。</li>
+<li>这里类的名称要写成 <strong>“m_…”</strong> 的形式。更重要的是<strong>Category</strong>一定要选择<strong>Control</strong>！！！<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0008.jpg" alt></li>
+<li>点击OK完成。</li>
+</ul>
+<h4 id="复选框和单选框"><a href="#复选框和单选框" class="headerlink" title="复选框和单选框"></a>复选框和单选框</h4><p>在串口调试助手中我们经常会用定时发送等功能，那么复选框就可以提供选择是否要进行某一操作的功能。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(((CButton*)GetDlgItem(IDC_CHECK1))-&gt;GetCheck()&#x3D;&#x3D;TRUE)</span><br><span class="line">	&#x2F;&#x2F;勾选</span><br><span class="line">else</span><br><span class="line">	&#x2F;&#x2F;未勾选</span><br></pre></td></tr></table></figure>
+<p>这里判断的<strong>TRUE</strong>是复选框勾选的状态。</p>
+<p>单选框不建议使用，因为单选框<strong>选中后不可取消</strong>。</p>
+<h4 id="组合框"><a href="#组合框" class="headerlink" title="组合框"></a>组合框</h4><p>非常实用的一个窗口控件，我们在制作上位机时，会提供给用户可选的串口号等等。</p>
+<h5 id="组合框添加内容"><a href="#组合框添加内容" class="headerlink" title="组合框添加内容"></a>组合框添加内容</h5><p>我们想要在程序运行开始后让组合框中出现下拉列表，就要在MFC初始化时将组合框的初始化添加进去。</p>
+<p>第一步还是要建类，我们命名为<strong>m_cbCom</strong>。<br>之后我们在程序中找到<strong>BOOL CHostcomputerDlg::OnInitDialog()</strong>这个函数，在程序开头附近，这是MFC控件初始化的函数。</p>
+<p>在此函数末尾<strong>// TODO: Add extra initialization here</strong>下，<strong>return TRUE;</strong>前，添加初始化代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_cbCom.InsertString(0,&quot;-请选择-&quot;);</span><br><span class="line">m_cbCom.InsertString(1,&quot;COM 1&quot;);</span><br><span class="line">m_cbCom.InsertString(2,&quot;COM 2&quot;);</span><br><span class="line">m_cbCom.InsertString(3,&quot;COM 3&quot;);</span><br><span class="line">m_cbCom.InsertString(4,&quot;COM 4&quot;);</span><br><span class="line">m_cbCom.InsertString(5,&quot;COM 5&quot;);</span><br><span class="line">m_cbCom.InsertString(6,&quot;COM 6&quot;);</span><br><span class="line">m_cbCom.InsertString(7,&quot;COM 7&quot;);</span><br><span class="line">m_cbCom.InsertString(8,&quot;COM 8&quot;);</span><br><span class="line">m_cbCom.InsertString(9,&quot;COM 9&quot;);</span><br><span class="line">m_cbCom.InsertString(10,&quot;COM 10&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>这里的序号要从0开始，双引号中是显示的内容。</p>
+<h5 id="获取用户选择的序号"><a href="#获取用户选择的序号" class="headerlink" title="获取用户选择的序号"></a>获取用户选择的序号</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int com;</span><br><span class="line">com&#x3D;m_cbCom.GetCurSel();</span><br></pre></td></tr></table></figure>
+<p>这里获取的是用户选择的项的序号。</p>
+<h5 id="组合框没有下拉菜单的问题"><a href="#组合框没有下拉菜单的问题" class="headerlink" title="组合框没有下拉菜单的问题"></a>组合框没有下拉菜单的问题</h5><p>鼠标放在组合框下拉箭头上，可以看到鼠标编程了上下指向的箭头，单击，则可以将组合框下拉菜单的高度改变。这是初学者经常遭遇的一个难题。再次点击切换回横向拉伸组合框。</p>
+<h4 id="滑块"><a href="#滑块" class="headerlink" title="滑块"></a>滑块</h4><p>想要实时显示滑块值，个人使用的是定时器每隔100ms获取一次滑块位置并在其后加一个编辑框，显示数值的方法。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0009.jpg" alt></p>
+<h5 id="滑块初始化"><a href="#滑块初始化" class="headerlink" title="滑块初始化"></a>滑块初始化</h5><p>滑块的使用也需要建立类。<br>和上面的其他控件一样，我们在初始化函数下加入代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_timslider.SetRange(10,1000);</span><br><span class="line">m_timslider.SetTicFreq(10);</span><br></pre></td></tr></table></figure>
+<p>这里的<strong>SetRange</strong>代表的是滑块的范围是10-1000，最小为10，最大为1000，<strong>SetTicFreq</strong>代表滑块移动的最小单位为10。</p>
+<h5 id="滑块值获取"><a href="#滑块值获取" class="headerlink" title="滑块值获取"></a>滑块值获取</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int slider;</span><br><span class="line">slider&#x3D;m_timslider.GetPos();</span><br></pre></td></tr></table></figure>
+<h4 id="MFC定时器"><a href="#MFC定时器" class="headerlink" title="MFC定时器"></a>MFC定时器</h4><h5 id="添加定时器函数"><a href="#添加定时器函数" class="headerlink" title="添加定时器函数"></a>添加定时器函数</h5><p>定时器控件不同于窗口中的其他控件，我们需要在类向导中添加。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0011.jpg" alt><br>点击<strong>Add Function</strong>，<strong>Edit Code</strong>，即可修改添加到程序中的定时器函数。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void CHostcomputerDlg::OnTimer(UINT nIDEvent) </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your message handler code here and&#x2F;or call default</span><br><span class="line">	</span><br><span class="line">	CDialog::OnTimer(nIDEvent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="定时器初始化"><a href="#定时器初始化" class="headerlink" title="定时器初始化"></a>定时器初始化</h5><p>同样在初始化函数中，添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SetTimer(1,50,NULL);</span><br></pre></td></tr></table></figure>
+<p>这里定义了定时器1，50ms中断一次。和芯片不同，我们的电脑可以模拟出很多个定时器，你可以定义2，3，4….</p>
+<h5 id="定时器关闭"><a href="#定时器关闭" class="headerlink" title="定时器关闭"></a>定时器关闭</h5><p>例如关闭定时器1：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">KillTimer(1);</span><br></pre></td></tr></table></figure>
+<h5 id="定时器中断"><a href="#定时器中断" class="headerlink" title="定时器中断"></a>定时器中断</h5><p>这里列举两个定时器的中断。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void CSwjDlg::OnTimer(UINT nIDEvent) </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your message handler code here and&#x2F;or call default</span><br><span class="line">	switch(nIDEvent)</span><br><span class="line">	&#123;</span><br><span class="line">	case 1:&#x2F;&#x2F;定时器1中断</span><br><span class="line">    	m_edit1.ReplaceSel(&quot;abcdefg&quot;);</span><br><span class="line">		m_edit1.ReplaceSel(&quot;\r\n&quot;);&#x2F;&#x2F;换行</span><br><span class="line">		break;</span><br><span class="line">		</span><br><span class="line">	case 2:&#x2F;&#x2F;定时器2中断</span><br><span class="line">    	com&#x3D;m_cbCom.GetCurSel();&#x2F;&#x2F;获取滑块位置</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">	CDialog::OnTimer(nIDEvent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="MFC串口控件"><a href="#MFC串口控件" class="headerlink" title="MFC串口控件"></a>MFC串口控件</h4><h5 id="添加串口控件"><a href="#添加串口控件" class="headerlink" title="添加串口控件"></a>添加串口控件</h5><p>窗体右键 <strong>插入ActiveX控件</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0012.jpg" alt></p>
+<p>在窗口上会出现一个小电话图标，这就是串口控件。这个图片在运行程序时是看不到的。<br>之后建立<strong>m_ctrlComm</strong>类。</p>
+<h5 id="串口的打开与初始化"><a href="#串口的打开与初始化" class="headerlink" title="串口的打开与初始化"></a>串口的打开与初始化</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_ctrlComm.SetCommPort(com);&#x2F;&#x2F;com为串口号</span><br><span class="line">if (m_ctrlComm.GetPortOpen())&#x2F;&#x2F;如果串口已经打开</span><br><span class="line">&#123;</span><br><span class="line">	m_ctrlComm.SetPortOpen(FALSE);&#x2F;&#x2F;不再重复打开</span><br><span class="line">&#125;</span><br><span class="line">if(!m_ctrlComm.GetPortOpen())&#x2F;&#x2F;串口没有打开</span><br><span class="line">&#123;</span><br><span class="line">	m_ctrlComm.SetPortOpen(TRUE);&#x2F;&#x2F;打开串口</span><br><span class="line">	SetDlgItemText(IDC_EDIT1,&quot;串口已打开&quot;);</span><br><span class="line">&#125;</span><br><span class="line">m_ctrlComm.SetInputMode(1);</span><br><span class="line">m_ctrlComm.SetSettings(&quot;4800,n,8,1&quot;);&#x2F;&#x2F;波特率</span><br><span class="line">m_ctrlComm.SetRThreshold(1);</span><br><span class="line">m_ctrlComm.SetInputLen(0);</span><br><span class="line">m_ctrlComm.GetInput();</span><br></pre></td></tr></table></figure>
+<h5 id="串口发送"><a href="#串口发送" class="headerlink" title="串口发送"></a>串口发送</h5><p>Format函数我们要经常使用在串口发送数据的处理上。<br>格式：</p>
+<p><strong>[CString].Format(“%s或%c或%d”，[char]或[int])</strong></p>
+<h6 id="普通字符串"><a href="#普通字符串" class="headerlink" title="普通字符串"></a>普通字符串</h6><p>个人建议使用CString发送，因为这样非常稳定。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CString send;</span><br><span class="line">char a[]&#x3D;&#123;&quot;abcd&quot;&#125;</span><br><span class="line">send.Format(&quot;%s&quot;,a);</span><br><span class="line">m_ctrlComm.SetOutput(COleVariant(&quot;abcd&quot;));&#x2F;&#x2F;字符串</span><br><span class="line">m_ctrlComm.SetOutput(COleVariant(send));&#x2F;&#x2F;发送变量</span><br></pre></td></tr></table></figure>
+<h6 id="发送整型数"><a href="#发送整型数" class="headerlink" title="发送整型数"></a>发送整型数</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CString send;</span><br><span class="line">int a&#x3D;123;</span><br><span class="line">send.Format(&quot;%d&quot;,a);</span><br><span class="line">m_ctrlComm.SetOutput(COleVariant(send));&#x2F;&#x2F;发送变量</span><br></pre></td></tr></table></figure>
+<h5 id="串口接收"><a href="#串口接收" class="headerlink" title="串口接收"></a>串口接收</h5><p>双击小电话，可以进入串口函数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int data[]&#x3D;&#123;0&#125;;</span><br><span class="line"></span><br><span class="line">void CSTM32_HIDDlg::OnOnCommMscomm() </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your control notification handler code here</span><br><span class="line">	VARIANT vReceive;</span><br><span class="line">	int len;</span><br><span class="line">	byte sBuf;</span><br><span class="line">	char rec[5];&#x2F;&#x2F;根据接收数据长度定义既可</span><br><span class="line">	if(m_ctrlComm.GetCommEvent()&#x3D;&#x3D;2)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		len&#x3D;m_ctrlComm.GetInBufferCount();</span><br><span class="line">		m_ctrlComm.SetInputLen(len);</span><br><span class="line">		vReceive&#x3D;m_ctrlComm.GetInput();</span><br><span class="line">		byte* buf&#x3D;new byte[len];</span><br><span class="line">		memcpy(buf,(byte*)vReceive.parray-&gt;pvData,len);</span><br><span class="line">		for(int i&#x3D;0;i&lt;len;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			sBuf&#x3D;*(buf+i);</span><br><span class="line">			data[i]&#x3D;sBuf;</span><br><span class="line">			rec[i]&#x3D;sBuf;</span><br><span class="line">		&#125;</span><br><span class="line">		delete buf;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的rec是储存接收信息的变量。<br><strong>注意：下位机一定要发送十六进制数据，普通的字符串会出现乱码。</strong><br>例:可在串口函数中判断rec第一位数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(rec[0]&#x3D;&#x3D;0x01)</span><br><span class="line">	m_edit.ReplaceSel(&quot;接收到0x01\r\n&quot;);</span><br></pre></td></tr></table></figure>
+<h4 id="MFC其他技巧"><a href="#MFC其他技巧" class="headerlink" title="MFC其他技巧"></a>MFC其他技巧</h4><h5 id="1-弹出另一个窗口和关闭"><a href="#1-弹出另一个窗口和关闭" class="headerlink" title="1.弹出另一个窗口和关闭"></a>1.弹出另一个窗口和关闭</h5><p>点击<strong>插入，窗体</strong>，名称可以自定义，点击确定。</p>
+<p>在主窗体添加新窗体的头文件，可以去新窗体程序中查看，其头文件为<strong>名称.h</strong>。</p>
+<p>加入新窗体名称为<strong>help</strong>，可以在主窗体的按钮中添加:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">help dlg;   &#x2F;&#x2F; 对话框类对象</span><br><span class="line"></span><br><span class="line">dlg.DoModal();</span><br></pre></td></tr></table></figure>
+
+<p>关闭新窗体可以在新窗体中操作：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">EndDialog(0);</span><br></pre></td></tr></table></figure>
+<p>即可关闭所在窗体。</p>
+<h5 id="2-定时关闭新窗体"><a href="#2-定时关闭新窗体" class="headerlink" title="2.定时关闭新窗体"></a>2.定时关闭新窗体</h5><p>添加定时器控件，之后在新窗体的<br><strong>void open::DoDataExchange(CDataExchange* pDX)</strong><br>函数尾部添加定时器初始化。<br>在定时器中断中添加关闭指令。</p>
+<h5 id="3-播放音乐"><a href="#3-播放音乐" class="headerlink" title="3.播放音乐"></a>3.播放音乐</h5><p>一般播放wav格式的音乐，我们可以音频转码成wav再播放</p>
+<h6 id="本地文件中的音乐"><a href="#本地文件中的音乐" class="headerlink" title="本地文件中的音乐"></a>本地文件中的音乐</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &quot;windows.h&quot;</span><br><span class="line">#include &quot;mmsystem.h&quot; &#x2F;&#x2F;头文件</span><br><span class="line"></span><br><span class="line">PlaySound(完整路径和后缀, AfxGetInstanceHandle(), SND_RESOURCE | SND_ASYNC);</span><br></pre></td></tr></table></figure>
+<h6 id="编译到程序资源的音乐"><a href="#编译到程序资源的音乐" class="headerlink" title="编译到程序资源的音乐"></a>编译到程序资源的音乐</h6><p>这种方式可以让音乐代码加入到程序中，无需外部文件。<br><strong>插入，资源，引入</strong>，选择文件类型为wav波形文件，选择相应文件即可将wav加入到资源中。<br>左侧资源窗中可以看到wav的名称为<strong>IDR_WAVE1</strong>或其他名称。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &quot;windows.h&quot;</span><br><span class="line">#include &quot;mmsystem.h&quot; &#x2F;&#x2F;头文件</span><br><span class="line"></span><br><span class="line">PlaySound((LPCTSTR)IDR_WAVE1, AfxGetInstanceHandle(), SND_RESOURCE | SND_ASYNC);</span><br></pre></td></tr></table></figure>
+<h6 id="单次播放，循环播放，停止播放"><a href="#单次播放，循环播放，停止播放" class="headerlink" title="单次播放，循环播放，停止播放"></a>单次播放，循环播放，停止播放</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PlaySound((LPCTSTR)IDR_WAVE1, AfxGetInstanceHandle(), SND_RESOURCE | SND_ASYNC| SND_LOOP);</span><br><span class="line">&#x2F;&#x2F;加入SND_LOOP为循环播放，否则为单次</span><br><span class="line"></span><br><span class="line">PlaySound(NULL,NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);</span><br><span class="line">&#x2F;&#x2F;停止所有音乐播放</span><br></pre></td></tr></table></figure>
+<h5 id="3-显示图片"><a href="#3-显示图片" class="headerlink" title="3.显示图片"></a>3.显示图片</h5><h6 id="添加资源"><a href="#添加资源" class="headerlink" title="添加资源"></a>添加资源</h6><p>建议使用bmp图片，如果加入图片失败请尝试将像素减少。<br>无法编辑属于可以正常显示的情况。<br><strong>插入，资源，引入</strong>选择文件类型为所有文件，点击bmp格式的图片即可添加。<br>左侧资源窗体上可见其名称。</p>
+<h6 id="添加图片控件"><a href="#添加图片控件" class="headerlink" title="添加图片控件"></a>添加图片控件</h6><p>控件栏上的图像控件，在窗体上框出希望的大小。<br>右键属性。<br><strong>类型</strong>：位图<br><strong>图像</strong>：图像ID</p>
+<h5 id="4-更换程序图标"><a href="#4-更换程序图标" class="headerlink" title="4.更换程序图标"></a>4.更换程序图标</h5><p>在工程文件夹下，找到<strong>res</strong>下的ico文件，将想替换的图标替换其即可。</p>
+<h2 id="五、END"><a href="#五、END" class="headerlink" title="五、END"></a>五、END</h2><p>编译好的可执行文件在工程文件Debug下哦！(｡・`ω´･)</p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何制作一台多功能循迹蓝牙遥控小车</title>
     <url>/2020/02/20/car/</url>
     <content><![CDATA[<h2 id="在刚接触51单片机的时候觉得这是很难的事情"><a href="#在刚接触51单片机的时候觉得这是很难的事情" class="headerlink" title="在刚接触51单片机的时候觉得这是很难的事情"></a>在刚接触51单片机的时候觉得这是很难的事情</h2><p>记录蓝牙小车的制作过程<br><img src="http://q5y0th4yi.bkt.clouddn.com/car001.jpg" alt></p>
