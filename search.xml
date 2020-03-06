@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>comruler</title>
+    <url>/2020/03/06/comruler/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>如何使用VC++6.0 MFC制作串口上位机</title>
     <url>/2020/02/22/hostcomputer/</url>
     <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0001.jpg" alt></p>
