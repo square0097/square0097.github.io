@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>comruler</title>
+    <title>自制的PCB格尺功能介绍</title>
     <url>/2020/03/06/comruler/</url>
-    <content><![CDATA[<h2 id="我还没来得及写…"><a href="#我还没来得及写…" class="headerlink" title="我还没来得及写…"></a>我还没来得及写…</h2>]]></content>
+    <content><![CDATA[<h2 id="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"><a href="#闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。" class="headerlink" title="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"></a>闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。</h2><p><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_0.jpg" alt></p>
+<a id="more"></a>
+<h2 id="一、这个尺子不鸡肋"><a href="#一、这个尺子不鸡肋" class="headerlink" title="一、这个尺子不鸡肋"></a>一、这个尺子不鸡肋</h2><p>有的人说这个尺子不方便用，焊上元件之后岂不是会很扎手？</p>
+<p>不会的，如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，在学校里绝对够B格！<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_01.JPG" alt></p>
+<p>可以应用为串口模块、2.4G遥控器，3.3V电源输出等</p>
+<h2 id="二、使用说明"><a href="#二、使用说明" class="headerlink" title="二、使用说明"></a>二、使用说明</h2><h3 id="串口模块"><a href="#串口模块" class="headerlink" title="串口模块"></a>串口模块</h3><p>串口模块在右侧偏右的位置，如果我们只需要使用串口模块，就只需要焊接这部分。<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02com1.JPG" alt><br>这里可以直接在左侧排针和焊点上作为RXD和TXD的引脚。</p>
+<p>这里power为电源指示灯。</p>
+<h3 id="51单片机"><a href="#51单片机" class="headerlink" title="51单片机"></a>51单片机</h3><p>焊接贴片时注意小圆点的方向位置。<br>可以使用CH340来下载，也可使用外接串口模块从左侧排针下载<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02_51.JPG" alt><br>download是单片机电源线上的开口，如果使用自带串口模块下载，在下载时请使用导线短接和断开进行手动下载，不要焊死。<br>使用外接下载器时焊死即可。</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p><strong>晶振11.0592M</strong></p>
+<pre><code>sbit k0=P0^4;
+sbit k1=P0^5;
+sbit k2=P0^6;
+sbit k3=P0^7;
+sbit led0=P1^3;
+sbit led1=P1^2;
+sbit led2=P1^1;
+sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V输出" class="headerlink" title="JDY-40和3.3V输出"></a>JDY-40和3.3V输出</h3><p>   这里默认的JDY-40波特率为9600，如需其他波特率请自行短接SET与VCC。<br>   <img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02_JDY.JPG" alt><br>   3.3位置为指示灯，左正右负。如果亮起则说明AMS1117正常输出3.3V。<br>   可以通过左侧3.3V输出口获得电压。<br>   同时3.3V为JDY-40提供电源。<br>   这里默认CS和GND短接，默认模块唤醒。<br>   数据传输有两个选择，接收51的串口信息则短接MCU处的焊点，接收CH340T则短接340T处焊点。<br>   这里JDY-40的侧面引脚仅起到固定作用。</p>
+<h2 id="三、AD图"><a href="#三、AD图" class="headerlink" title="三、AD图"></a>三、AD图</h2><p>PCB二维和三维<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_04.JPG" alt><br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02.JPG" alt><br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_03.JPG" alt></p>
+]]></content>
   </entry>
   <entry>
     <title>如何使用VC++6.0 MFC制作串口上位机</title>
@@ -313,7 +331,7 @@
   </entry>
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
-    <url>/2020/02/19/Openmvstm32/</url>
+    <url>/2020/02/19/Openmv-stm32/</url>
     <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg" alt></p>
 <a id="more"></a>
 
@@ -383,7 +401,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>AT89C51RC/RD系列贴片与P4管脚的使用</title>
+    <title>AT89C52RC/RD系列贴片与P4管脚的使用</title>
     <url>/2020/02/18/AT89C52/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="http://q5y0th4yi.bkt.clouddn.com/at89c52001.jpg" alt></p>
 <a id="more"></a>
@@ -444,6 +462,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*  BYTE Registers  *&#x2F;</span><br><span class="line">sfr P0    &#x3D; 0x80;</span><br><span class="line">sfr P1    &#x3D; 0x90;</span><br><span class="line">sfr P2    &#x3D; 0xA0;</span><br><span class="line">sfr P3    &#x3D; 0xB0;</span><br><span class="line">sfr P4    &#x3D; 0xE8;&#x2F;&#x2F;后加的</span><br><span class="line">sfr PSW   &#x3D; 0xD0;</span><br><span class="line">sfr ACC   &#x3D; 0xE0;</span><br><span class="line">sfr B     &#x3D; 0xF0;</span><br><span class="line">sfr SP    &#x3D; 0x81;</span><br><span class="line">sfr DPL   &#x3D; 0x82;</span><br><span class="line">sfr DPH   &#x3D; 0x83;</span><br><span class="line">sfr PCON  &#x3D; 0x87;</span><br><span class="line">sfr TCON  &#x3D; 0x88;</span><br><span class="line">sfr TMOD  &#x3D; 0x89;</span><br><span class="line">sfr TL0   &#x3D; 0x8A;</span><br><span class="line">sfr TL1   &#x3D; 0x8B;</span><br><span class="line">sfr TH0   &#x3D; 0x8C;</span><br><span class="line">sfr TH1   &#x3D; 0x8D;</span><br><span class="line">sfr IE    &#x3D; 0xA8;</span><br><span class="line">sfr IP    &#x3D; 0xB8;</span><br><span class="line">sfr SCON  &#x3D; 0x98;</span><br><span class="line">sfr SBUF  &#x3D; 0x99;</span><br></pre></td></tr></table></figure>
 <p>P4管脚加进来就好了,如果没有看文档的话可能就定义0xC0了…，8，9，A,B,C刚刚好是不是。</p>
 <p>但是，官方文档中写了P4是0xE8！！！</p>
+<p><strong>这里要注意的是，虽然P4引脚都写有标准IO口的字样，但是 P4.4 P4.5 P4.6 不建议使用！！！！亲测无法控制这三个引脚</strong></p>
 <h2 id="四、END"><a href="#四、END" class="headerlink" title="四、END"></a>四、END</h2><p>希望各位大佬们熬过疫情&lt;(▰˘◡˘▰)&gt;<br>有问题可以联系我哦</p>
 ]]></content>
   </entry>
