@@ -108,24 +108,36 @@
 
 
 
-  <meta name="description" content="总想合伙搞点事情">
+  <meta name="description" content="型号：51FIT_04 串口下载集成开发板详细的使用方法以及PCB原理图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="51FIT04">
-<meta property="og:url" content="http://yoursite.com/2020/03/14/51FIT04/index.html">
+<meta property="og:title" content="51FIT自制系列04最小系统板">
+<meta property="og:url" content="http://yoursite.com/2020/03/16/51FIT04/index.html">
 <meta property="og:site_name" content="Square0097">
-<meta property="og:description" content="总想合伙搞点事情">
+<meta property="og:description" content="型号：51FIT_04 串口下载集成开发板详细的使用方法以及PCB原理图">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-14T15:10:25.000Z">
-<meta property="article:modified_time" content="2020-03-14T15:10:26.040Z">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_000.jpg">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_010.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_005.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_001.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_002.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_007.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_003.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_004.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_006.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_008.JPG">
+<meta property="og:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_009.JPG">
+<meta property="article:published_time" content="2020-03-16T15:10:25.000Z">
+<meta property="article:modified_time" content="2020-03-16T04:51:40.360Z">
 <meta property="article:author" content="Square0097">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q5y0th4yi.bkt.clouddn.com/51FIT04_000.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/14/51FIT04/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/16/51FIT04/"/>
 
 
 
@@ -135,7 +147,7 @@
   };
 </script>
 
-  <title>51FIT04 | Square0097</title>
+  <title>51FIT自制系列04最小系统板 | Square0097</title>
   
 
 
@@ -333,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/14/51FIT04/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/16/51FIT04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Square0097">
@@ -350,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">51FIT04
+          <h1 class="post-title" itemprop="name headline">51FIT自制系列04最小系统板
               
             
           </h1>
@@ -376,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2020-03-14 23:10:25 / 修改时间：23:10:26" itemprop="dateCreated datePublished" datetime="2020-03-14T23:10:25+08:00">2020-03-14</time>
+              <time title="创建时间：2020-03-16 23:10:25 / 修改时间：12:51:40" itemprop="dateCreated datePublished" datetime="2020-03-16T23:10:25+08:00">2020-03-16</time>
             
 
             
@@ -422,7 +434,22 @@
       
 
       
-        
+        <h1 id="型号：51FIT-04-串口下载集成开发板"><a href="#型号：51FIT-04-串口下载集成开发板" class="headerlink" title="型号：51FIT_04 串口下载集成开发板"></a>型号：51FIT_04 串口下载集成开发板</h1><p>详细的使用方法以及PCB原理图<br><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_000.jpg" alt></p>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于许多的单片机使用者而言，或多或少都存在着一些对外围电路焊接错误等问题。51FIT系列制作的主要目的在于化繁为简，制作多模块集成的开发系统板。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>51FIT04串口下载继承开发板，主要组成为<strong>51单片机贴片</strong>和<strong>CH340T</strong>串口芯片，以达到下载程序时不需要使用串口模块频繁接线，使用普通的USB线即可下载。<br><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_010.JPG" alt></p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><h3 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h3><p>只可从5V引脚和USB进行供电，3.3V为稳压输出引脚。</p>
+<h3 id="程序下载"><a href="#程序下载" class="headerlink" title="程序下载"></a>程序下载</h3><p>04机并没有自动下载功能，自动下载将在后续型号的板子上增加。<br>这里我们需要手动进行复位，点击下载程序后按下RST进行断电复位，即可下载。</p>
+<h3 id="板载LED"><a href="#板载LED" class="headerlink" title="板载LED"></a>板载LED</h3><p>为了将所有常用IO口引出切不受影响，这里使用P40-3引脚控制led。<br>详细使用方法：[AT89C52RC/RD系列贴片与P4管脚的使用][1]<br>[1]:<a href="https://square0097.github.io/2020/02/18/AT89C52" target="_blank" rel="noopener">https://square0097.github.io/2020/02/18/AT89C52</a></p>
+<h2 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h2><h3 id="51芯片"><a href="#51芯片" class="headerlink" title="51芯片"></a>51芯片</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_005.JPG" alt></p>
+<h3 id="51最小系统"><a href="#51最小系统" class="headerlink" title="51最小系统"></a>51最小系统</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_001.JPG" alt></p>
+<h3 id="板载LED-1"><a href="#板载LED-1" class="headerlink" title="板载LED"></a>板载LED</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_002.JPG" alt></p>
+<h3 id="电源指示"><a href="#电源指示" class="headerlink" title="电源指示"></a>电源指示</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_007.JPG" alt></p>
+<h3 id="CH340T"><a href="#CH340T" class="headerlink" title="CH340T"></a>CH340T</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_003.JPG" alt></p>
+<h3 id="外接串口"><a href="#外接串口" class="headerlink" title="外接串口"></a>外接串口</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_004.JPG" alt></p>
+<h3 id="AMS1117-3-3"><a href="#AMS1117-3-3" class="headerlink" title="AMS1117 3.3"></a>AMS1117 3.3</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_006.JPG" alt></p>
+<h2 id="外形图"><a href="#外形图" class="headerlink" title="外形图"></a>外形图</h2><p><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_008.JPG" alt><br><img src="http://q5y0th4yi.bkt.clouddn.com/51FIT04_009.JPG" alt></p>
+
       
     </div>
 
@@ -511,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -589,6 +625,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#型号：51FIT-04-串口下载集成开发板"><span class="nav-number">1.</span> <span class="nav-text">型号：51FIT_04 串口下载集成开发板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用说明"><span class="nav-number">1.3.</span> <span class="nav-text">使用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电源"><span class="nav-number">1.3.1.</span> <span class="nav-text">电源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序下载"><span class="nav-number">1.3.2.</span> <span class="nav-text">程序下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#板载LED"><span class="nav-number">1.3.3.</span> <span class="nav-text">板载LED</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理图"><span class="nav-number">1.4.</span> <span class="nav-text">原理图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#51芯片"><span class="nav-number">1.4.1.</span> <span class="nav-text">51芯片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51最小系统"><span class="nav-number">1.4.2.</span> <span class="nav-text">51最小系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#板载LED-1"><span class="nav-number">1.4.3.</span> <span class="nav-text">板载LED</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电源指示"><span class="nav-number">1.4.4.</span> <span class="nav-text">电源指示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CH340T"><span class="nav-number">1.4.5.</span> <span class="nav-text">CH340T</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外接串口"><span class="nav-number">1.4.6.</span> <span class="nav-text">外接串口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMS1117-3-3"><span class="nav-number">1.4.7.</span> <span class="nav-text">AMS1117 3.3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外形图"><span class="nav-number">1.5.</span> <span class="nav-text">外形图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
