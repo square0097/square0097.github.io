@@ -23,20 +23,20 @@
   <entry>
     <title>欢迎访问</title>
     <url>/2020/03/07/welcome/</url>
-    <content><![CDATA[<h1 id="訪問を歓迎します！！！"><a href="#訪問を歓迎します！！！" class="headerlink" title="訪問を歓迎します！！！"></a>訪問を歓迎します！！！</h1><p>用户可搜索关键字<br>博客新增评论功能<br><img src="https://s1.ax1x.com/2020/03/20/867iIP.png" alt></p>
+    <content><![CDATA[<h1 id="訪問を歓迎します！！！"><a href="#訪問を歓迎します！！！" class="headerlink" title="訪問を歓迎します！！！"></a>訪問を歓迎します！！！</h1><p>用户可搜索关键字<br>博客新增评论功能<br><img src="https://s1.ax1x.com/2020/03/21/8Wg1PS.png" alt></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=32272857&auto=1&height=66"></iframe>]]></content>
   </entry>
   <entry>
     <title>自制的PCB格尺功能介绍</title>
     <url>/2020/03/06/comruler/</url>
-    <content><![CDATA[<h2 id="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"><a href="#闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。" class="headerlink" title="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"></a>闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。</h2><p><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_0.jpg" alt></p>
+    <content><![CDATA[<h2 id="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"><a href="#闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。" class="headerlink" title="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"></a>闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。</h2><p><img src="https://s1.ax1x.com/2020/03/21/8R92yd.jpg" alt></p>
 <a id="more"></a>
 <h2 id="一、这个尺子不鸡肋"><a href="#一、这个尺子不鸡肋" class="headerlink" title="一、这个尺子不鸡肋"></a>一、这个尺子不鸡肋</h2><p>有的人说这个尺子不方便用，焊上元件之后岂不是会很扎手？</p>
-<p>不会的，如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，在学校里绝对够B格！<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_01.JPG" alt></p>
+<p>不会的，如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，在学校里绝对够B格！<br><img src="https://s1.ax1x.com/2020/03/21/8R9yWD.jpg" alt></p>
 <p>可以应用为串口模块、2.4G遥控器，3.3V电源输出等</p>
 <h2 id="二、使用说明"><a href="#二、使用说明" class="headerlink" title="二、使用说明"></a>二、使用说明</h2><h3 id="串口模块"><a href="#串口模块" class="headerlink" title="串口模块"></a>串口模块</h3><p>串口模块在右侧偏右的位置，如果我们只需要使用串口模块，就只需要焊接这部分。<br><img src="https://s1.ax1x.com/2020/03/20/8cqGcT.jpg" alt><br>这里可以直接在左侧排针和焊点上作为RXD和TXD的引脚。</p>
 <p>这里power为电源指示灯。</p>
-<h3 id="51单片机"><a href="#51单片机" class="headerlink" title="51单片机"></a>51单片机</h3><p>焊接贴片时注意小圆点的方向位置。<br>可以使用CH340来下载，也可使用外接串口模块从左侧排针下载<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02_51.JPG" alt><br>download是单片机电源线上的开口，如果使用自带串口模块下载，在下载时请使用导线短接和断开进行手动下载，不要焊死。<br>使用外接下载器时焊死即可。</p>
+<h3 id="51单片机"><a href="#51单片机" class="headerlink" title="51单片机"></a>51单片机</h3><p>焊接贴片时注意小圆点的方向位置。<br>可以使用CH340来下载，也可使用外接串口模块从左侧排针下载<br><img src="https://s1.ax1x.com/2020/03/21/8R9we1.jpg" alt><br>download是单片机电源线上的开口，如果使用自带串口模块下载，在下载时请使用导线短接和断开进行手动下载，不要焊死。<br>使用外接下载器时焊死即可。</p>
 <h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p><strong>晶振11.0592M</strong></p>
 <pre><code>sbit k0=P0^4;
 sbit k1=P0^5;
@@ -46,24 +46,24 @@ sbit led0=P1^3;
 sbit led1=P1^2;
 sbit led2=P1^1;
 sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V输出" class="headerlink" title="JDY-40和3.3V输出"></a>JDY-40和3.3V输出</h3><p>   这里默认的JDY-40波特率为9600，如需其他波特率请自行短接SET与VCC。<br>   <img src="https://s1.ax1x.com/2020/03/20/8cqnBQ.jpg" alt><br>   3.3位置为指示灯，左正右负。如果亮起则说明AMS1117正常输出3.3V。<br>   可以通过左侧3.3V输出口获得电压。<br>   同时3.3V为JDY-40提供电源。<br>   这里默认CS和GND短接，默认模块唤醒。<br>   数据传输有两个选择，接收51的串口信息则短接MCU处的焊点，接收CH340T则短接340T处焊点。<br>   这里JDY-40的侧面引脚仅起到固定作用。</p>
-<h2 id="三、AD图"><a href="#三、AD图" class="headerlink" title="三、AD图"></a>三、AD图</h2><p>PCB二维和三维<br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_04.JPG" alt><br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_02.JPG" alt><br><img src="http://q5y0th4yi.bkt.clouddn.com/comruler_03.JPG" alt></p>
+<h2 id="三、AD图"><a href="#三、AD图" class="headerlink" title="三、AD图"></a>三、AD图</h2><p>PCB二维和三维<br><img src="https://s1.ax1x.com/2020/03/21/8R9gQH.jpg" alt><br><img src="https://s1.ax1x.com/2020/03/21/8R9sJO.jpg" alt><br><img src="https://s1.ax1x.com/2020/03/21/8R9Uy9.jpg" alt></p>
 ]]></content>
   </entry>
   <entry>
     <title>如何使用VC++6.0 MFC制作串口上位机</title>
     <url>/2020/02/22/hostcomputer/</url>
-    <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0001.jpg" alt></p>
+    <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="https://s1.ax1x.com/2020/03/21/8feBDK.jpg" alt></p>
 <a id="more"></a>
 <h2 id="一、为什么使用VC6"><a href="#一、为什么使用VC6" class="headerlink" title="一、为什么使用VC6"></a>一、为什么使用VC6</h2><p>VC6虽然是比较老的编程软件，但是他的性能很好，功能齐全，操作简单，可以完成windows系统下很多的功能，比如串口通信，网络通信等等。现在的VS虽然比VC6性能好得多，但是低配电脑基本上很卡，不建议低配电脑使用，我就是。</p>
 <h2 id="二、VC6的安装"><a href="#二、VC6的安装" class="headerlink" title="二、VC6的安装"></a>二、VC6的安装</h2><p>这里有一个<a href="https://wap.qidian.qq.com/ol/rest/view/2852150155_10207_1_1551343393?from=singlemessage" target="_blank" rel="noopener">微信上的安装教程</a></p>
 <h2 id="三、MFC的工程建立和编译"><a href="#三、MFC的工程建立和编译" class="headerlink" title="三、MFC的工程建立和编译"></a>三、MFC的工程建立和编译</h2><h3 id="1、工程建立"><a href="#1、工程建立" class="headerlink" title="1、工程建立"></a>1、工程建立</h3><ul>
-<li>点击文件，新建，输入工程名（注意不可以使用中文），点击<strong>MFC AppWizard[exe]</strong>后确定。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0003.jpg" alt><br>建立基本对话框<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0004.jpg" alt><br>之后会提示你工程的相关信息，确认即可。</li>
+<li>点击文件，新建，输入工程名（注意不可以使用中文），点击<strong>MFC AppWizard[exe]</strong>后确定。<br><img src="https://s1.ax1x.com/2020/03/21/8RPTMQ.jpg" alt><br>建立基本对话框<br><img src="https://s1.ax1x.com/2020/03/21/8RP7rj.jpg" alt><br>之后会提示你工程的相关信息，确认即可。</li>
 </ul>
 <h3 id="2、编译"><a href="#2、编译" class="headerlink" title="2、编译"></a>2、编译</h3><p>编译运行和常规的方式一样。</p>
 <p>如果我们想让电脑里没有安装VC6的人运行我们制作的MFC程序的话，我们需要在<strong>工程</strong>，<strong>设置</strong> 中，将<strong>使用MFC作为共享的DLL</strong>改为<strong>使用MFC作为静态链接库</strong>，这样我们就可以让其他电脑运行MFC的窗口程序，这就是在可执行文件中加入了MFC的运行库。</p>
 <p>但根据情况而定，这样会让你的exe增到10MB左右。</p>
 <h3 id="打开工程"><a href="#打开工程" class="headerlink" title="打开工程"></a>打开工程</h3><p>我们要注意的是打开工程一定要点击 <strong>打开工作空间</strong> ，因为点击打开会出现闪退现象！原因未知…</p>
-<h2 id="四、窗口控件的使用"><a href="#四、窗口控件的使用" class="headerlink" title="四、窗口控件的使用"></a>四、窗口控件的使用</h2><h3 id="1、窗口控件的插入"><a href="#1、窗口控件的插入" class="headerlink" title="1、窗口控件的插入"></a>1、窗口控件的插入</h3><p><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0005.jpg" alt><br>在工作区的右侧我们可以看到这样的一个工具栏，我妈可以添加需要的空间到窗口上，同样窗口上的多余内容我们可以删掉。</p>
+<h2 id="四、窗口控件的使用"><a href="#四、窗口控件的使用" class="headerlink" title="四、窗口控件的使用"></a>四、窗口控件的使用</h2><h3 id="1、窗口控件的插入"><a href="#1、窗口控件的插入" class="headerlink" title="1、窗口控件的插入"></a>1、窗口控件的插入</h3><p><img src="https://s1.ax1x.com/2020/03/21/8RPHqs.jpg" alt><br>在工作区的右侧我们可以看到这样的一个工具栏，我妈可以添加需要的空间到窗口上，同样窗口上的多余内容我们可以删掉。</p>
 <h3 id="2、具体的控件使用方法"><a href="#2、具体的控件使用方法" class="headerlink" title="2、具体的控件使用方法"></a>2、具体的控件使用方法</h3><p>如果你找不到你的窗口界面了，那么请打开左侧栏的<strong>ResourceView</strong>中的<strong>Dialog</strong>。</p>
 <h4 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h4><p>按钮的名称在其右键属性中更改，标题即为显示的名称。</p>
 <p>双击按钮，出现对话框，这里是让用户设定按钮时间函数的名称，可以默认为其ID，也可以自行设置为 <strong>“On…”</strong> 的格式。</p>
@@ -72,7 +72,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <p>如果窗口上按钮很多，命名无法找到相应函数时可以双击窗口按钮来编辑程序。</p>
 <p>按钮事件函数我们可以理解成单片机中的中断函数，程序执行过程中只要按下按钮就会执行这个函数。</p>
 <h4 id="静态文本和组框"><a href="#静态文本和组框" class="headerlink" title="静态文本和组框"></a>静态文本和组框</h4><p>这两个就很简单了，直接放置到窗口上，右键属性，在标题中修改要显示的内容。</p>
-<h4 id="编辑框"><a href="#编辑框" class="headerlink" title="编辑框"></a>编辑框</h4><p>编辑框可以作为显示窗口使用，也可作为输入框。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0006.jpg" alt></p>
+<h4 id="编辑框"><a href="#编辑框" class="headerlink" title="编辑框"></a>编辑框</h4><p>编辑框可以作为显示窗口使用，也可作为输入框。<br><img src="https://s1.ax1x.com/2020/03/21/8RPLaq.jpg" alt></p>
 <ul>
 <li>如果横向文字很多，那么可选择水平滚动，以方便查看横向，如果编辑框宽度够用那么就不用改横向的属性。</li>
 <li>作为上位机我们显示数据可以是一行一行的显示，这时候就要使用垂直和自动垂直滚动，这样更新的数据就会逐行在这里显示。</li>
@@ -86,9 +86,9 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <ul>
 <li>窗体任意位置右键</li>
 <li>建立类向导</li>
-<li>Member Variables<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0007.jpg" alt></li>
+<li>Member Variables<br><img src="https://s1.ax1x.com/2020/03/21/8RPxRU.jpg" alt></li>
 <li>点击Add Variable…为IDC_EDIT1这个编辑框建立一个类。</li>
-<li>这里类的名称要写成 <strong>“m_…”</strong> 的形式。更重要的是<strong>Category</strong>一定要选择<strong>Control</strong>！！！<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0008.jpg" alt></li>
+<li>这里类的名称要写成 <strong>“m_…”</strong> 的形式。更重要的是<strong>Category</strong>一定要选择<strong>Control</strong>！！！<br><img src="https://s1.ax1x.com/2020/03/21/8RP5RS.jpg" alt></li>
 <li>点击OK完成。</li>
 </ul>
 <h4 id="复选框和单选框"><a href="#复选框和单选框" class="headerlink" title="复选框和单选框"></a>复选框和单选框</h4><p>在串口调试助手中我们经常会用定时发送等功能，那么复选框就可以提供选择是否要进行某一操作的功能。</p>
@@ -105,12 +105,12 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <h5 id="获取用户选择的序号"><a href="#获取用户选择的序号" class="headerlink" title="获取用户选择的序号"></a>获取用户选择的序号</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int com;</span><br><span class="line">com&#x3D;m_cbCom.GetCurSel();</span><br></pre></td></tr></table></figure>
 <p>这里获取的是用户选择的项的序号。</p>
 <h5 id="组合框没有下拉菜单的问题"><a href="#组合框没有下拉菜单的问题" class="headerlink" title="组合框没有下拉菜单的问题"></a>组合框没有下拉菜单的问题</h5><p>鼠标放在组合框下拉箭头上，可以看到鼠标编程了上下指向的箭头，单击，则可以将组合框下拉菜单的高度改变。这是初学者经常遭遇的一个难题。再次点击切换回横向拉伸组合框。</p>
-<h4 id="滑块"><a href="#滑块" class="headerlink" title="滑块"></a>滑块</h4><p>想要实时显示滑块值，个人使用的是定时器每隔100ms获取一次滑块位置并在其后加一个编辑框，显示数值的方法。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0009.jpg" alt></p>
+<h4 id="滑块"><a href="#滑块" class="headerlink" title="滑块"></a>滑块</h4><p>想要实时显示滑块值，个人使用的是定时器每隔100ms获取一次滑块位置并在其后加一个编辑框，显示数值的方法。<br><img src="https://s1.ax1x.com/2020/03/21/8RPhPf.jpg" alt></p>
 <h5 id="滑块初始化"><a href="#滑块初始化" class="headerlink" title="滑块初始化"></a>滑块初始化</h5><p>滑块的使用也需要建立类。<br>和上面的其他控件一样，我们在初始化函数下加入代码。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_timslider.SetRange(10,1000);</span><br><span class="line">m_timslider.SetTicFreq(10);</span><br></pre></td></tr></table></figure>
 <p>这里的<strong>SetRange</strong>代表的是滑块的范围是10-1000，最小为10，最大为1000，<strong>SetTicFreq</strong>代表滑块移动的最小单位为10。</p>
 <h5 id="滑块值获取"><a href="#滑块值获取" class="headerlink" title="滑块值获取"></a>滑块值获取</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int slider;</span><br><span class="line">slider&#x3D;m_timslider.GetPos();</span><br></pre></td></tr></table></figure>
-<h4 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h4><h5 id="添加定时器函数"><a href="#添加定时器函数" class="headerlink" title="添加定时器函数"></a>添加定时器函数</h5><p>定时器控件不同于窗口中的其他控件，我们需要在类向导中添加。<br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0011.jpg" alt><br>点击<strong>Add Function</strong>，<strong>Edit Code</strong>，即可修改添加到程序中的定时器函数。如：</p>
+<h4 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h4><h5 id="添加定时器函数"><a href="#添加定时器函数" class="headerlink" title="添加定时器函数"></a>添加定时器函数</h5><p>定时器控件不同于窗口中的其他控件，我们需要在类向导中添加。<br><img src="https://s1.ax1x.com/2020/03/21/8RPIxg.jpg" alt><br>点击<strong>Add Function</strong>，<strong>Edit Code</strong>，即可修改添加到程序中的定时器函数。如：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void CHostcomputerDlg::OnTimer(UINT nIDEvent) </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your message handler code here and&#x2F;or call default</span><br><span class="line">	</span><br><span class="line">	CDialog::OnTimer(nIDEvent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="定时器初始化"><a href="#定时器初始化" class="headerlink" title="定时器初始化"></a>定时器初始化</h5><p>同样在初始化函数中，添加</p>
@@ -120,10 +120,10 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">KillTimer(1);</span><br></pre></td></tr></table></figure>
 <h5 id="定时器中断"><a href="#定时器中断" class="headerlink" title="定时器中断"></a>定时器中断</h5><p>这里列举两个定时器的中断。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void CSwjDlg::OnTimer(UINT nIDEvent) </span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; TODO: Add your message handler code here and&#x2F;or call default</span><br><span class="line">	switch(nIDEvent)</span><br><span class="line">	&#123;</span><br><span class="line">	case 1:&#x2F;&#x2F;定时器1中断</span><br><span class="line">    	m_edit1.ReplaceSel(&quot;abcdefg&quot;);</span><br><span class="line">		m_edit1.ReplaceSel(&quot;\r\n&quot;);&#x2F;&#x2F;换行</span><br><span class="line">		break;</span><br><span class="line">		</span><br><span class="line">	case 2:&#x2F;&#x2F;定时器2中断</span><br><span class="line">    	com&#x3D;m_cbCom.GetCurSel();&#x2F;&#x2F;获取滑块位置</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">	CDialog::OnTimer(nIDEvent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="进度条"><a href="#进度条" class="headerlink" title="进度条"></a>进度条</h4><p><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0013.jpg" alt><br>建立m_Progress类</p>
+<h4 id="进度条"><a href="#进度条" class="headerlink" title="进度条"></a>进度条</h4><p><img src="https://s1.ax1x.com/2020/03/21/8RPRat.jpg" alt><br>建立m_Progress类</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_Progress.SetRange(0,100);&#x2F;&#x2F;设置进度条的数值范围</span><br><span class="line">m_Progress.SetStep(10);&#x2F;&#x2F;设置单步长度如10</span><br><span class="line">m_Progress.StepIt();&#x2F;&#x2F;走一步</span><br><span class="line">m_Progress.SetPos(50);&#x2F;&#x2F;设置进度条在自定义的位置如50</span><br><span class="line">n&#x3D;m_Progress.GetPos();&#x2F;&#x2F;获取当前位置</span><br></pre></td></tr></table></figure>
 
-<h4 id="串口控件"><a href="#串口控件" class="headerlink" title="串口控件"></a>串口控件</h4><h5 id="添加串口控件"><a href="#添加串口控件" class="headerlink" title="添加串口控件"></a>添加串口控件</h5><p>窗体右键 <strong>插入ActiveX控件</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/hostcomputer0012.jpg" alt></p>
+<h4 id="串口控件"><a href="#串口控件" class="headerlink" title="串口控件"></a>串口控件</h4><h5 id="添加串口控件"><a href="#添加串口控件" class="headerlink" title="添加串口控件"></a>添加串口控件</h5><p>窗体右键 <strong>插入ActiveX控件</strong><br><img src="https://s1.ax1x.com/2020/03/21/8RPWIP.jpg" alt></p>
 <p>在窗口上会出现一个小电话图标，这就是串口控件。这个图片在运行程序时是看不到的。<br>之后建立<strong>m_ctrlComm</strong>类。</p>
 <h5 id="串口的打开"><a href="#串口的打开" class="headerlink" title="串口的打开"></a>串口的打开</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">m_ctrlComm.SetCommPort(com);&#x2F;&#x2F;com为串口号</span><br><span class="line">if (m_ctrlComm.GetPortOpen())&#x2F;&#x2F;如果串口已经打开</span><br><span class="line">&#123;</span><br><span class="line">	m_ctrlComm.SetPortOpen(FALSE);&#x2F;&#x2F;不再重复打开</span><br><span class="line">&#125;</span><br><span class="line">if(!m_ctrlComm.GetPortOpen())&#x2F;&#x2F;串口没有打开</span><br><span class="line">&#123;</span><br><span class="line">	m_ctrlComm.SetPortOpen(TRUE);&#x2F;&#x2F;打开串口</span><br><span class="line">	SetDlgItemText(IDC_EDIT1,&quot;串口已打开&quot;);</span><br><span class="line">&#125;</span><br><span class="line">m_ctrlComm.SetInputMode(1);</span><br><span class="line">m_ctrlComm.SetSettings(&quot;4800,n,8,1&quot;);&#x2F;&#x2F;波特率</span><br><span class="line">m_ctrlComm.SetRThreshold(1);</span><br><span class="line">m_ctrlComm.SetInputLen(0);</span><br><span class="line">m_ctrlComm.GetInput();</span><br></pre></td></tr></table></figure>
 <h5 id="串口发送"><a href="#串口发送" class="headerlink" title="串口发送"></a>串口发送</h5><p>Format函数我们要经常使用在串口发送数据的处理上。<br>格式：</p>
@@ -312,7 +312,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>Jlink修复和JTAG龙邱K60、STM32C8T6程序下载</title>
     <url>/2020/02/19/Jlink/</url>
-    <content><![CDATA[<h2 id="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"><a href="#开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？" class="headerlink" title="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"></a>开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接和C8T6如何连接Jlink<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink001.jpg" alt></p>
+    <content><![CDATA[<h2 id="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"><a href="#开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？" class="headerlink" title="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"></a>开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接和C8T6如何连接Jlink<br><img src="http://s1.ax1x.com/2020/03/21/8WwmDS.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、如何修复Jlink"><a href="#一、如何修复Jlink" class="headerlink" title="一、如何修复Jlink"></a>一、如何修复Jlink</h3><p>一般情况下可能是固件丢失，我们可以尝试重新刷写固件，如果设备管理器仍然识别不了，那就可能是硬件问题。</p>
 <h4 id="1-下载和安装烧录软件"><a href="#1-下载和安装烧录软件" class="headerlink" title="1.下载和安装烧录软件"></a>1.下载和安装烧录软件</h4><p>链接：<a href="https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA" target="_blank" rel="noopener">https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA</a><br>提取码：klzs</p>
@@ -327,11 +327,11 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <li>断开<strong>USB</strong>再断开短接</li>
 </ul>
 <h4 id="3-刷写新的固件"><a href="#3-刷写新的固件" class="headerlink" title="3.刷写新的固件"></a>3.刷写新的固件</h4><ul>
-<li><p>连接<strong>USB</strong>,打开<strong>sam-ba.exe</strong>，可以看到有设备连接，点击<strong>Connect</strong>,如果没有<strong>Connect</strong>怎么办，可以往下拉一下窗口，可能是被挡住了<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink002.JPG" alt></p>
+<li><p>连接<strong>USB</strong>,打开<strong>sam-ba.exe</strong>，可以看到有设备连接，点击<strong>Connect</strong>,如果没有<strong>Connect</strong>怎么办，可以往下拉一下窗口，可能是被挡住了<br><img src="https://s1.ax1x.com/2020/03/21/8RFG7R.jpg" alt></p>
 </li>
-<li><p>选择<strong>Send File Name</strong>,找到文件中的V8固件，并点击<strong>Send File</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink003.JPG" alt></p>
+<li><p>选择<strong>Send File Name</strong>,找到文件中的V8固件，并点击<strong>Send File</strong><br><img src="https://s1.ax1x.com/2020/03/21/8Wweu8.jpg" alt></p>
 </li>
-<li><p>下面会出现两次询问窗口，第一次是是否解锁，我们选择<strong>Yes</strong>，第二次是是否锁定，我们选择<strong>No</strong><br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink004.JPG" alt><br>这一套操作下来V8固件重刷就完成了</p>
+<li><p>下面会出现两次询问窗口，第一次是是否解锁，我们选择<strong>Yes</strong>，第二次是是否锁定，我们选择<strong>No</strong><br><img src="https://s1.ax1x.com/2020/03/21/8RFYA1.jpg" alt><br>这一套操作下来V8固件重刷就完成了</p>
 </li>
 </ul>
 <h4 id="4-Keil5无法使用此Jlink"><a href="#4-Keil5无法使用此Jlink" class="headerlink" title="4.Keil5无法使用此Jlink"></a>4.Keil5无法使用此Jlink</h4><p>Keil5默认的Jlink驱动是很高版本的，我们需要替换成低版本的Jlink驱动。</p>
@@ -345,23 +345,25 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 </ul>
 <p>复制到<strong>keil5/ARM/Segger</strong>替换原文件</p>
 <p>完成后发现Jlink已经可以正常使用</p>
-<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink005.png" alt><br>这里<strong>RST</strong>接<strong>SRST_N</strong>即可</p>
-<p>我在Jlink内部连接好了下载线，在外壳上扣了一个洞方便插线<br><img src="http://q5y0th4yi.bkt.clouddn.com/jlink006.jpg" alt></p>
+<h3 id="二、龙邱K60如何转接"><a href="#二、龙邱K60如何转接" class="headerlink" title="二、龙邱K60如何转接"></a>二、龙邱K60如何转接</h3><p>看图，按照途中管脚接线<br><img src="https://s1.ax1x.com/2020/03/21/8RF8B9.png" alt><br>这里<strong>RST</strong>接<strong>SRST_N</strong>即可</p>
+<p>我在Jlink内部连接好了下载线，在外壳上扣了一个洞方便插线<br><img src="https://s1.ax1x.com/2020/03/21/8WBgtH.jpg" alt></p>
 <h3 id="三、STM32C8T6怎样使用Jlink下载？"><a href="#三、STM32C8T6怎样使用Jlink下载？" class="headerlink" title="三、STM32C8T6怎样使用Jlink下载？"></a>三、STM32C8T6怎样使用Jlink下载？</h3><p>这个接不方便做出标准的外接口，因为A13、A14引脚并未在普通管脚中引出，不过可以将4针焊下替换成40针同向的向下排针，方便插在洞洞板上。</p>
-<p><img src="http://q5y0th4yi.bkt.clouddn.com/Jlink007.jpg" alt></p>
+<p><img src="https://s1.ax1x.com/2020/03/21/8WwEgP.jpg" alt></p>
 <p>也可以使用龙邱K60下载接口，PB4的JTRST可不接，不影响下载。</p>
-<p><img src="http://q5y0th4yi.bkt.clouddn.com/jlink008.png" alt></p>
+<p><img src="https://s1.ax1x.com/2020/03/21/8WwA3t.jpg" alt></p>
 <p><strong>注意</strong> ：JTAG上靠近VCC的的 <strong>nTRST</strong> 不可接C8T6的RST。</p>
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>K60有发烫的毛病的时候千万不可一直插着电源</p>
+<h3 id="四、使用Keil5为K60下载时选错版本上锁"><a href="#四、使用Keil5为K60下载时选错版本上锁" class="headerlink" title="四、使用Keil5为K60下载时选错版本上锁"></a>四、使用Keil5为K60下载时选错版本上锁</h3><p>现象为提示未找到芯片，使用IAR下载一次即可，一路点击“是”即可下载，之后再换Keil5时发现可以正常下载。</p>
+<h3 id="五、常见K60故障"><a href="#五、常见K60故障" class="headerlink" title="五、常见K60故障"></a>五、常见K60故障</h3><h4 id="K60有发烫"><a href="#K60有发烫" class="headerlink" title="K60有发烫"></a>K60有发烫</h4><p>的毛病的时候千万不可一直插着电源,这是内部io已经击穿，撑不了多久就会坏掉。</p>
+<h4 id="判断芯片是否烧坏"><a href="#判断芯片是否烧坏" class="headerlink" title="判断芯片是否烧坏"></a>判断芯片是否烧坏</h4><p>检测VCC与GND之间电阻，在120欧左右为正常，100以下已经烧坏。</p>
 ]]></content>
   </entry>
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
     <url>/2020/02/19/Openmv-stm32/</url>
-    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32001.jpg" alt></p>
+    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="https://s1.ax1x.com/2020/03/21/8WyEgs.jpg" alt></p>
 <a id="more"></a>
 
-<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="http://q5y0th4yi.bkt.clouddn.com/Openmv-stm32002.jpg" alt></p>
+<h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="https://s1.ax1x.com/2020/03/21/8WrjmV.jpg" alt></p>
 <h3 id="1-串口管脚"><a href="#1-串口管脚" class="headerlink" title="1.串口管脚"></a>1.串口管脚</h3><p><strong>P4 TXD</strong></p>
 <p><strong>P5 RXD</strong></p>
 <h3 id="2-串口初始化"><a href="#2-串口初始化" class="headerlink" title="2.串口初始化"></a>2.串口初始化</h3><p>python下的代码很简单</p>
@@ -378,10 +380,10 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>超声波模块HC-SR04四针通用延时驱动</title>
     <url>/2020/02/18/HC-SR04/</url>
-    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04001.jpg" alt></p>
+    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="https://s1.ax1x.com/2020/03/21/8RPUV1.jpg" alt></p>
 <a id="more"></a>
 
-<h2 id="一、模块简介"><a href="#一、模块简介" class="headerlink" title="一、模块简介"></a>一、模块简介</h2><p>超声波模块我们在很多领域都能得到应用<br><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04002.jpg" alt><br>HC-SR04模块使用很简单，我们使用它来制作一些小设备完全足够。<br>我们一般的思路就是使用定时器，这样是非常准确的。</p>
+<h2 id="一、模块简介"><a href="#一、模块简介" class="headerlink" title="一、模块简介"></a>一、模块简介</h2><p>超声波模块我们在很多领域都能得到应用<br><img src="https://s1.ax1x.com/2020/03/21/8RPtbR.jpg" alt><br>HC-SR04模块使用很简单，我们使用它来制作一些小设备完全足够。<br>我们一般的思路就是使用定时器，这样是非常准确的。</p>
 <h3 id="1-基本参数"><a href="#1-基本参数" class="headerlink" title="1.基本参数"></a>1.基本参数</h3><ul>
 <li>使用电压：DC—5V   </li>
 <li>静态电流：小于2mA       </li>
@@ -389,7 +391,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
 <li>电平输出：底0V         </li>
 <li>感应角度：不大于15度    </li>
 <li>探测距离：2cm-450cm </li>
-<li>测量精度：可达0.2cm   <h3 id="2-时序"><a href="#2-时序" class="headerlink" title="2.时序"></a>2.时序</h3><img src="http://q5y0th4yi.bkt.clouddn.com/HC-SR04003.png" alt><h3 id="3-管脚"><a href="#3-管脚" class="headerlink" title="3.管脚"></a>3.管脚</h3></li>
+<li>测量精度：可达0.2cm   <h3 id="2-时序"><a href="#2-时序" class="headerlink" title="2.时序"></a>2.时序</h3><img src="https://s1.ax1x.com/2020/03/21/8RPYr9.png" alt><h3 id="3-管脚"><a href="#3-管脚" class="headerlink" title="3.管脚"></a>3.管脚</h3></li>
 </ul>
 <table>
 <thead>
