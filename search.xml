@@ -27,12 +27,12 @@
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=32272857&auto=1&height=66"></iframe>]]></content>
   </entry>
   <entry>
-    <title>自制的PCB格尺功能介绍</title>
+    <title>COM-Ruler01使用说明</title>
     <url>/2020/03/06/comruler/</url>
-    <content><![CDATA[<h2 id="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"><a href="#闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。" class="headerlink" title="闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。"></a>闲暇无聊之余，画一个PCB的格尺，附带上一些小模块。</h2><p><img src="https://s1.ax1x.com/2020/03/21/8R92yd.jpg" alt></p>
+    <content><![CDATA[<h2 id="简述COM集成系列PCB的格尺的使用方法。"><a href="#简述COM集成系列PCB的格尺的使用方法。" class="headerlink" title="简述COM集成系列PCB的格尺的使用方法。"></a>简述COM集成系列PCB的格尺的使用方法。</h2><p><img src="https://s1.ax1x.com/2020/03/21/8R92yd.jpg" alt></p>
 <a id="more"></a>
-<h2 id="一、这个尺子不鸡肋"><a href="#一、这个尺子不鸡肋" class="headerlink" title="一、这个尺子不鸡肋"></a>一、这个尺子不鸡肋</h2><p>有的人说这个尺子不方便用，焊上元件之后岂不是会很扎手？</p>
-<p>不会的，如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，在学校里绝对够B格！<br><img src="https://s1.ax1x.com/2020/03/21/8R9yWD.jpg" alt></p>
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>有的人说这个尺子不方便用啊，焊上元件之后岂不是会很扎手？</p>
+<p>如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，那还咋扎手，在学校绝对彰显你是个搞开发的！<br><img src="https://s1.ax1x.com/2020/03/21/8R9yWD.jpg" alt></p>
 <p>可以应用为串口模块、2.4G遥控器，3.3V电源输出等</p>
 <h2 id="二、使用说明"><a href="#二、使用说明" class="headerlink" title="二、使用说明"></a>二、使用说明</h2><h3 id="串口模块"><a href="#串口模块" class="headerlink" title="串口模块"></a>串口模块</h3><p>串口模块在右侧偏右的位置，如果我们只需要使用串口模块，就只需要焊接这部分。<br><img src="https://s1.ax1x.com/2020/03/20/8cqGcT.jpg" alt><br>这里可以直接在左侧排针和焊点上作为RXD和TXD的引脚。</p>
 <p>这里power为电源指示灯。</p>
