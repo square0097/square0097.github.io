@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>K60扩展板S01</title>
+    <url>/2020/04/02/K60-S01/</url>
+    <content><![CDATA[<h2 id="制作了便于日常调试测试的K60扩展底板"><a href="#制作了便于日常调试测试的K60扩展底板" class="headerlink" title="制作了便于日常调试测试的K60扩展底板"></a>制作了便于日常调试测试的K60扩展底板</h2><p>此板串口有一个很粗心的错误<br><img src="https://s1.ax1x.com/2020/04/02/G8OydK.jpg" alt></p>
+<a id="more"></a>
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>离比赛越来越近了，手头上有龙邱K60核心板，但是引脚全部向下，使用很不方便，想要像开发板一样可以引出全部引脚方便我们使用杜邦线。</p>
+<h3 id="二、外观"><a href="#二、外观" class="headerlink" title="二、外观"></a>二、外观</h3><p><img src="https://s1.ax1x.com/2020/04/02/GJhcTJ.jpg" alt><br><img src="https://s1.ax1x.com/2020/04/02/GJhrOU.jpg" alt><br><img src="https://s1.ax1x.com/2020/04/02/GJhBlV.jpg" alt></p>
+<h3 id="三、使用"><a href="#三、使用" class="headerlink" title="三、使用"></a>三、使用</h3><h4 id="1-供电"><a href="#1-供电" class="headerlink" title="1.供电"></a>1.供电</h4><p>K60核心板的供电电压为3.3V，Jlink下载时即可为核心板供电，但我们有些元件是需要5V电压的，这里提供了USB口供5V电，也可通过5V排针供电，经由AMS1117转换3.3V为K60供电。</p>
+<h4 id="2-串口"><a href="#2-串口" class="headerlink" title="2.串口"></a>2.串口</h4><p>这里有一个很粗心的错误，原定使用UAART3的B11,B10管脚，但是在画电路时不小心将CH340T的TXD接到了K60的TXD上，因此UART3无法使用，但好在UART0的B16,B17就在旁边，将四个管脚交叉焊接即可使用UART0。<br>建议将B10,B11拉低，以避免其悬空或误用导致信息错误。</p>
+<h4 id="3-按键"><a href="#3-按键" class="headerlink" title="3.按键"></a>3.按键</h4><p>按键接在GND上,分别连接E27,E28,E26,简单判断即可使用。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>51FIT自制系列04最小系统板</title>
     <url>/2020/03/16/51FIT04/</url>
     <content><![CDATA[<h1 id="型号：51FIT-04-串口下载集成开发板"><a href="#型号：51FIT-04-串口下载集成开发板" class="headerlink" title="型号：51FIT_04 串口下载集成开发板"></a>型号：51FIT_04 串口下载集成开发板</h1><p>详细的使用方法以及PCB原理图<br><img src="https://s1.ax1x.com/2020/03/20/8c2dzR.jpg" alt></p>
