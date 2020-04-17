@@ -3,7 +3,7 @@
   <entry>
     <title>长按按钮开关机</title>
     <url>/2020/04/05/powerctrl/</url>
-    <content><![CDATA[<h2 id="实现一个按键控制设备电源关断"><a href="#实现一个按键控制设备电源关断" class="headerlink" title="实现一个按键控制设备电源关断"></a>实现一个按键控制设备电源关断</h2><p>本文记录三极管继电器实现一键开关的方法<br><img src="https://s1.ax1x.com/2020/04/05/GraSYR.jpg" alt></p>
+    <content><![CDATA[<h2 id="实现一个按键控制设备电源关断"><a href="#实现一个按键控制设备电源关断" class="headerlink" title="实现一个按键控制设备电源关断"></a>实现一个按键控制设备电源关断</h2><p>本文记录三极管继电器实现一键开关的方法<br><img src="https://ae01.alicdn.com/kf/Hb0b05277e48d4cf499ded9ab70d46de0Y.jpg" alt></p>
 <a id="more"></a>
 <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>一开始不打算用继电器的，因为想要做的设备非常小，常规的继电器替继太大，小体积继电器价格较为昂贵。因此一开始的思路是用三极管或mos管。</p>
 <h2 id="二、设计思路"><a href="#二、设计思路" class="headerlink" title="二、设计思路"></a>二、设计思路</h2><p>首先这不是用纯电路完成的，当然用纯电路更好但是会相对复杂。</p>
@@ -16,7 +16,7 @@
   <entry>
     <title>51FIT自制系列04最小系统板</title>
     <url>/2020/03/16/51FIT04/</url>
-    <content><![CDATA[<h1 id="型号：51FIT-04-串口下载集成开发板"><a href="#型号：51FIT-04-串口下载集成开发板" class="headerlink" title="型号：51FIT_04 串口下载集成开发板"></a>型号：51FIT_04 串口下载集成开发板</h1><p>详细的使用方法以及PCB原理图<br><img src="https://s1.ax1x.com/2020/03/20/8c2dzR.jpg" alt></p>
+    <content><![CDATA[<h1 id="型号：51FIT-04-串口下载集成开发板"><a href="#型号：51FIT-04-串口下载集成开发板" class="headerlink" title="型号：51FIT_04 串口下载集成开发板"></a>型号：51FIT_04 串口下载集成开发板</h1><p>详细的使用方法以及PCB原理图<br><img src="https://ae01.alicdn.com/kf/H5da4bb57ea1f4bff919ddaea371e473c3.jpg" alt></p>
 <a id="more"></a>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于许多的单片机使用者而言，或多或少都存在着一些对外围电路焊接错误等问题。51FIT系列制作的主要目的在于化繁为简，制作多模块集成的开发系统板。</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>51FIT04串口下载继承开发板，主要组成为<strong>51单片机贴片</strong>和<strong>CH340T</strong>串口芯片，以达到下载程序时不需要使用串口模块频繁接线，使用普通的USB线即可下载。<br><img src="https://s1.ax1x.com/2020/03/20/8c26oD.jpg" alt></p>
@@ -36,14 +36,14 @@
   <entry>
     <title>欢迎访问</title>
     <url>/2020/03/07/welcome/</url>
-    <content><![CDATA[<h1 id="訪問を歓迎します！！！"><a href="#訪問を歓迎します！！！" class="headerlink" title="訪問を歓迎します！！！"></a>訪問を歓迎します！！！</h1><p>用户可搜索关键字<br>博客新增评论功能<br><img src="https://s1.ax1x.com/2020/03/21/8Wg1PS.png" alt></p>
+    <content><![CDATA[<h1 id="訪問を歓迎します！！！"><a href="#訪問を歓迎します！！！" class="headerlink" title="訪問を歓迎します！！！"></a>訪問を歓迎します！！！</h1><p>用户可搜索关键字<br>博客新增评论功能<br><img src="https://ae01.alicdn.com/kf/H955510208f0d4cbb82b943026428f0b20.png" alt></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29722692&auto=1&height=66"></iframe>
 ]]></content>
   </entry>
   <entry>
     <title>COM-Ruler01自制系列集成尺</title>
     <url>/2020/03/06/comruler/</url>
-    <content><![CDATA[<h1 id="型号：COM-R01无线串口51格尺集成板"><a href="#型号：COM-R01无线串口51格尺集成板" class="headerlink" title="型号：COM-R01无线串口51格尺集成板"></a>型号：COM-R01无线串口51格尺集成板</h1><p><img src="https://s1.ax1x.com/2020/03/21/8R92yd.jpg" alt></p>
+    <content><![CDATA[<h1 id="型号：COM-R01无线串口51格尺集成板"><a href="#型号：COM-R01无线串口51格尺集成板" class="headerlink" title="型号：COM-R01无线串口51格尺集成板"></a>型号：COM-R01无线串口51格尺集成板</h1><p><img src="https://ae01.alicdn.com/kf/H39689e9f52c540329a6029c97d2a5213X.jpg" alt></p>
 <a id="more"></a>
 <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>有的人说这个尺子不方便用啊，焊上元件之后岂不是会很扎手？</p>
 <p>如果我们真的只是需要用它来作为格尺，就不需要焊接任何元件，仅仅是作为一个板子，那还咋扎手，在学校绝对彰显你是个搞开发的！<br><img src="https://s1.ax1x.com/2020/03/21/8R9yWD.jpg" alt></p>
@@ -66,7 +66,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>如何使用VC++6.0 MFC制作串口上位机</title>
     <url>/2020/02/22/hostcomputer/</url>
-    <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="https://s1.ax1x.com/2020/03/21/8feBDK.jpg" alt></p>
+    <content><![CDATA[<h2 id="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"><a href="#VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？" class="headerlink" title="VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？"></a>VC6MFC的串口控件怎么用？编辑框显示串口信息是乱码怎么办？下拉列表没有内容怎么办？</h2><p>记录上vc6位机制作过程和需要注意的问题<br><img src="https://ae01.alicdn.com/kf/Hc33b8a934a704f5e9b0f33ebe9f93568v.jpg" alt></p>
 <a id="more"></a>
 <h2 id="一、为什么使用VC6"><a href="#一、为什么使用VC6" class="headerlink" title="一、为什么使用VC6"></a>一、为什么使用VC6</h2><p>VC6虽然是比较老的编程软件，但是他的性能很好，功能齐全，操作简单，可以完成windows系统下很多的功能，比如串口通信，网络通信等等。现在的VS虽然比VC6性能好得多，但是低配电脑基本上很卡，不建议低配电脑使用，我就是。</p>
 <h2 id="二、VC6的安装"><a href="#二、VC6的安装" class="headerlink" title="二、VC6的安装"></a>二、VC6的安装</h2><p>这里有一个<a href="https://wap.qidian.qq.com/ol/rest/view/2852150155_10207_1_1551343393?from=singlemessage" target="_blank" rel="noopener">微信上的安装教程</a></p>
@@ -172,7 +172,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>如何制作一台多功能循迹蓝牙遥控小车</title>
     <url>/2020/02/20/car/</url>
-    <content><![CDATA[<h2 id="在刚接触51单片机的时候觉得这是很难的事情"><a href="#在刚接触51单片机的时候觉得这是很难的事情" class="headerlink" title="在刚接触51单片机的时候觉得这是很难的事情"></a>在刚接触51单片机的时候觉得这是很难的事情</h2><p>记录蓝牙小车的制作过程<br><img src="https://s1.ax1x.com/2020/03/20/8cfAqx.jpg" alt></p>
+    <content><![CDATA[<h2 id="在刚接触51单片机的时候觉得这是很难的事情"><a href="#在刚接触51单片机的时候觉得这是很难的事情" class="headerlink" title="在刚接触51单片机的时候觉得这是很难的事情"></a>在刚接触51单片机的时候觉得这是很难的事情</h2><p>记录蓝牙小车的制作过程<br><img src="https://ae01.alicdn.com/kf/H2c517b909dbd4e5ba2a3b6ec558a75d6W.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>不要觉得它很难，就像在做一个玩具一样。蓝牙小车对于初学者是道坎，pwm调速这个就难到了很多人，其实这些都不难。</p>
 <h3 id="二、什么是pwm调速"><a href="#二、什么是pwm调速" class="headerlink" title="二、什么是pwm调速"></a>二、什么是pwm调速</h3><p>网上是这么说的：</p>
@@ -326,7 +326,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>Jlink修复和JTAG龙邱K60、STM32C8T6程序下载</title>
     <url>/2020/02/19/Jlink/</url>
-    <content><![CDATA[<h2 id="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"><a href="#开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？" class="headerlink" title="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"></a>开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接和C8T6如何连接Jlink<br><img src="http://s1.ax1x.com/2020/03/21/8WwmDS.jpg" alt></p>
+    <content><![CDATA[<h2 id="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"><a href="#开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？" class="headerlink" title="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"></a>开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接和C8T6如何连接Jlink<br><img src="https://ae01.alicdn.com/kf/H2e7564ce7c2f43829d1acdbd5b68fe7aC.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、如何修复Jlink"><a href="#一、如何修复Jlink" class="headerlink" title="一、如何修复Jlink"></a>一、如何修复Jlink</h3><p>一般情况下可能是固件丢失，我们可以尝试重新刷写固件，如果设备管理器仍然识别不了，那就可能是硬件问题。</p>
 <h4 id="1-下载和安装烧录软件"><a href="#1-下载和安装烧录软件" class="headerlink" title="1.下载和安装烧录软件"></a>1.下载和安装烧录软件</h4><p>链接：<a href="https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA" target="_blank" rel="noopener">https://pan.baidu.com/s/1GnowM-hvnPJJ6nIFYQleFA</a><br>提取码：klzs</p>
@@ -374,7 +374,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
     <url>/2020/02/19/Openmv-stm32/</url>
-    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="https://s1.ax1x.com/2020/03/21/8WyEgs.jpg" alt></p>
+    <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="https://ae01.alicdn.com/kf/He03a513d19e648edb70676fb7bb96e9ae.jpg" alt></p>
 <a id="more"></a>
 
 <h2 id="OpenMV串口通信"><a href="#OpenMV串口通信" class="headerlink" title="OpenMV串口通信"></a>OpenMV串口通信</h2><p>openmv的管脚为数不多，我们要想做到控制更多的模块就要将他作为一个图像处理的传感器，把信息传输给我们用的其他芯片。<br><img src="https://s1.ax1x.com/2020/03/21/8WrjmV.jpg" alt></p>
@@ -394,7 +394,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>超声波模块HC-SR04四针通用延时驱动</title>
     <url>/2020/02/18/HC-SR04/</url>
-    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="https://s1.ax1x.com/2020/03/21/8RPUV1.jpg" alt></p>
+    <content><![CDATA[<h2 id="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"><a href="#对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？" class="headerlink" title="对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？"></a>对距离要求精度不高的情况下，如何使用延时函数来粗略的获取距离呢？</h2><p>本文意在让初学者学会使用超声波模块<br><img src="https://ae01.alicdn.com/kf/Hd941248583e744c8bfa57e8399c3c403h.jpg" alt></p>
 <a id="more"></a>
 
 <h2 id="一、模块简介"><a href="#一、模块简介" class="headerlink" title="一、模块简介"></a>一、模块简介</h2><p>超声波模块我们在很多领域都能得到应用<br><img src="https://s1.ax1x.com/2020/03/21/8RPtbR.jpg" alt><br>HC-SR04模块使用很简单，我们使用它来制作一些小设备完全足够。<br>我们一般的思路就是使用定时器，这样是非常准确的。</p>
@@ -445,7 +445,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   <entry>
     <title>AT89C52RC/RD系列贴片与P4管脚的使用</title>
     <url>/2020/02/18/AT89C52/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="https://s1.ax1x.com/2020/03/20/8cRXND.jpg" alt></p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然51系列性能相比stm32系列简直是很鸡肋，但是考虑到成本和使用简单的问题，在开发较小的不需要复杂功能的设备上，个人比较倾向于使用51的贴片。<br><img src="https://ae01.alicdn.com/kf/Hc5fd0d830dba4b7c99550a9977f17043m.jpg" alt></p>
 <a id="more"></a>
 
 <h4 id="为啥突然想弄这个了呢"><a href="#为啥突然想弄这个了呢" class="headerlink" title="为啥突然想弄这个了呢"></a>为啥突然想弄这个了呢</h4><p>疫情发展得很迅速，快递全都躺在路上了，补番补得头疼，手头也没什么东西能玩的。看到在路上的51贴片里有P4这个管脚，但是我们51标准的头文件里没有P4管脚的相关定义，于是在家无聊的时间里研究了一下51贴片系列如何使用P4管脚。</p>
