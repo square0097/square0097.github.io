@@ -15,6 +15,11 @@
   </entry>
   <entry>
     <title>STM32ZET6 Core Board</title>
+    <url>/2020/04/02/STM32ZET6-Core-Board/</url>
+    <content><![CDATA[<h1 id="STM32ZET6-Core-Board"><a href="#STM32ZET6-Core-Board" class="headerlink" title="STM32ZET6 Core Board"></a>STM32ZET6 Core Board</h1>]]></content>
+  </entry>
+  <entry>
+    <title>STM32ZET6 Core Board</title>
     <url>/2020/04/02/%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE/</url>
     <content><![CDATA[<h1 id="STM32ZET6-Core-Board"><a href="#STM32ZET6-Core-Board" class="headerlink" title="STM32ZET6 Core Board"></a>STM32ZET6 Core Board</h1>]]></content>
   </entry>
@@ -378,7 +383,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   </entry>
   <entry>
     <title>OpenMV与单片机串口通信问题</title>
-    <url>/2020/02/19/Openmv-stm32/</url>
+    <url>/2020/02/19/OpenMV%E4%B8%8E%E5%8D%95%E7%89%87%E6%9C%BA%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2 id="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"><a href="#之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码" class="headerlink" title="之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码"></a>之前在做OpenMV串口通信的时候遇到了一些坑，整形数据没有使用json字符串出现了乱码</h2><p>本文记录了其串口通信的方法<br><img src="https://ae01.alicdn.com/kf/He03a513d19e648edb70676fb7bb96e9ae.jpg" alt></p>
 <a id="more"></a>
 
