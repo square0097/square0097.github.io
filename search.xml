@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>简单的NE555与CD4017流水灯</title>
+    <url>/2021/04/16/%E7%AE%80%E5%8D%95%E7%9A%84NE555%E4%B8%8ECD/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>长按按钮开关机</title>
     <url>/2020/04/05/powerctrl/</url>
     <content><![CDATA[<h2 id="实现一个按键控制设备电源关断"><a href="#实现一个按键控制设备电源关断" class="headerlink" title="实现一个按键控制设备电源关断"></a>实现一个按键控制设备电源关断</h2><p>本文记录三极管继电器实现一键开关的方法<br><img src="https://ae01.alicdn.com/kf/Hb0b05277e48d4cf499ded9ab70d46de0Y.jpg" alt></p>
@@ -12,16 +17,6 @@
 <p>后期使用可控硅效果也不太好…</p>
 <h2 id="四、电路搭建"><a href="#四、电路搭建" class="headerlink" title="四、电路搭建"></a>四、电路搭建</h2><p>因为单片机输出电压是3.3V，所以选用3V继电器是最好的。<br>个人选用的松下信号继电器。<br><img src="https://s1.ax1x.com/2020/04/05/GrdFCn.jpg" alt><br>体积很小，长宽高15mm-10mm-5mm<br><img src="https://s1.ax1x.com/2020/04/05/Gr6StU.jpg" alt><br>电路是很简单了，但是相比网上使用三极管mos管组成的开关电路，继电器性能真的要高很多很多，至少在电压问题上完全不用担心。<br>配一张成功的图<br><img src="https://s1.ax1x.com/2020/04/05/GrcqZq.jpg" alt><br>上面可控硅啥的我就不拆了好麻烦。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>STM32ZET6 Core Board</title>
-    <url>/2020/04/02/STM32ZET6-Core-Board/</url>
-    <content><![CDATA[<h1 id="STM32ZET6-Core-Board"><a href="#STM32ZET6-Core-Board" class="headerlink" title="STM32ZET6 Core Board"></a>STM32ZET6 Core Board</h1>]]></content>
-  </entry>
-  <entry>
-    <title>STM32ZET6 Core Board</title>
-    <url>/2020/04/02/%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<h1 id="STM32ZET6-Core-Board"><a href="#STM32ZET6-Core-Board" class="headerlink" title="STM32ZET6 Core Board"></a>STM32ZET6 Core Board</h1>]]></content>
   </entry>
   <entry>
     <title>51FIT自制系列04最小系统板</title>
@@ -335,7 +330,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   </entry>
   <entry>
     <title>Jlink修复和JTAG龙邱K60、STM32C8T6程序下载</title>
-    <url>/2020/02/19/Jlink/</url>
+    <url>/2020/02/19/Jlink%E4%BF%AE%E5%A4%8D%E5%92%8CJTAG%E9%BE%99%E9%82%B1K60%E3%80%81STM32C8T6%E7%A8%8B%E5%BA%8F%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<h2 id="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"><a href="#开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？" class="headerlink" title="开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？"></a>开始学习龙邱K60，但是不知道如何转接JTAG，有个Jlink还不好使的怎么办？C8T6也想用Jlink下载怎么办？</h2><p>本篇主要记录如何修复Jlink，以及龙邱K60如何使用20针转接和C8T6如何连接Jlink<br><img src="https://ae01.alicdn.com/kf/H2e7564ce7c2f43829d1acdbd5b68fe7aC.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、如何修复Jlink"><a href="#一、如何修复Jlink" class="headerlink" title="一、如何修复Jlink"></a>一、如何修复Jlink</h3><p>一般情况下可能是固件丢失，我们可以尝试重新刷写固件，如果设备管理器仍然识别不了，那就可能是硬件问题。</p>
