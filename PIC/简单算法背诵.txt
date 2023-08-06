@@ -1,0 +1,455 @@
+数据结构算法背诵
+
+一.线性表
+1.逆转顺序表中所有元素
+void Reverse(int A[],int n)
+{
+     int i,j;
+	 for(i=0;i<n/2;i++)
+	 {
+	               t=A[i];
+		A[i]=A[n-i-1];
+		A[n-i-1]=t;
+	 }
+}
+2.删除线性链表中数据域为item的所有结点
+void PurgeItem(LinkList &list)
+{
+             LinkList p,q=list;
+	
+	p=list->next;
+	while(p!=null)
+	{
+	   if(p->data==item){
+	     q->nxet=p->next;
+	     free(p);
+	     p=q->next;
+	   }else{
+	     q=p;
+                   p=p->next;
+	   }
+	}
+	if(list->data==item)
+	{
+	  q=list;
+	  list=list->next;
+	  free(q);
+	}
+}
+3.逆转线性链表
+void Reverse(LinkList &list)
+{
+  LinkList p,q,r;
+  
+  p=list;
+  q=null;
+  while(p!=null)
+  {
+     r=q;
+     q=p;
+     p=p->next;
+     q->next=r;	 
+  }
+  list=q;
+}
+4.复制线性链表（递归）
+LinkList Copy(LinkList lista)
+{
+ LinkList listb;
+ if(lista==null)
+   return null;
+ else{
+   listb=(LinkList)malloc(sizeof(LNode));
+   listb->data=lista->data;
+   listb->next=Copy(lista->next);
+   return listb;
+ }
+}
+5.将两个按值有序排列的非空线性链表合并为按值有序的线性链表
+LinkList MergeList(LinkList lista,LinkList listb)
+{
+  LinkList listc,p=lista,q=listb,r;
+  //listc指向lista和listb所指结点中较小者
+  if(lista->data<=listb->data){
+    listc=lista;
+    r=lista;
+    p=lista->next;	
+  }
+  else{
+   listc=listb;
+   r=listb;
+   q=listb->next;
+  }
+  while(p!=null&&q!=null)
+  {
+     if(p->data<=q->data)
+	 {
+                 r->next=p;
+                r=p;
+                q=listb->next;		
+	 }
+	 else{
+	   r->next=q;
+	   r=q;
+	   q=q->next;
+	 }
+  }
+  r->next=(p!=null)?p:q;
+  return listc;
+}
+
+二.树
+1.二叉树的先序遍历（非递归算法）
+
+#define MAX_STACK   50
+
+void PreOrderTraverse(BTreee T)
+{
+  BTreee STACK[MAX_STACK],p=T;
+  int top=-1;
+  
+  while(p!=null||top!=-1)
+  {
+    while(p!=null)
+	{
+	  VISIT(p);
+	  STACK[++top]=p;
+	  p=p->lchild;
+	}
+	p=STACK[top--];
+	p=p->rchild;
+  }
+}
+2.二叉树的中序遍历（非递归算法）
+
+#define MAX_STACK   50
+
+void InOrderTraverse(BTreee T)
+{
+  BTreee STACK[MAX_STACK],p=T;
+  int top=-1;
+  
+  while(p!=null||top!=-1)
+  {
+    while(p!=null)
+	{
+	  STACK[++top]=p;
+	  p=p->lchild;
+	}
+	p=STACK[top--];
+	VISIT(p);
+	p=p->rchild;
+  }
+}
+3.二叉树的后序遍历（非递归算法）
+
+#define MAX_STACK   50
+
+void PostOrderTraverse(BTreee T)
+{
+  BTreee STACK1[MAX_STACK],p=T;
+  int STACK2[MAX_STACK],flag,top=-1;
+  
+  while(p!=null||top!=-1)
+  {
+    while(p!=null)
+	{
+	  STACK1[++top]=p;
+	  STACK2[top]=0;
+	  p=p->lchild;
+	}
+    p=STACK1[top];
+	flag=STACK2[top--];
+	if(flag==0){
+	  STACK1[++top]=p;
+	  STACK2[top]=1;
+	  p=p->rchild;
+	}
+	else{
+	  VISIT(p);
+	  p=null;
+	}
+  }
+}
+4.二叉树的按层次遍历
+
+#define MAX_QUEUE   50
+
+void LayeredOrderTraverse(BTreee T)
+{
+  BTreee QUEUE[MAX_QUEUE],p;
+  int front,rear;
+   
+  if(T!=null)
+  {
+    QUEUE[0]=T;
+	front=-1;
+	rear=0;
+	while(front<rear)
+	{
+	  p=QUEUE[++front];
+	  VISIT(p);
+	  if(p->lchild!=null)
+	     QUEUE[++rear]=p->lchild;
+                if(p->rchild!=null)
+	     QUEUE[++rear]=p->rchild;
+	}
+  }
+}
+5.建立二叉树
+BTreee CreateBT()
+{
+  char ch;
+  BTreee T;
+  
+  scanf("%c",&ch);
+  if(ch==' ')
+    return null;
+  else{
+    T=(BTreee)malloc(sizeof(BTNode));
+	T->data=ch;
+	T->lchild=CreateBT();
+	T->rchild=CreateBT();
+	return T;
+  }
+}
+6.求二叉树深度(递归算法)
+
+int Depth(BTreee T)
+{
+  int ldepth,rdepth;
+  
+  if(T==null)
+    return 0;
+  else{
+     ldepth=Depth(T->lchild);
+     rdepth=Depth(T->rchild);
+     if(ldepth>rdepth)
+        return ldepth+1;
+     else 
+        return rdepth+1;
+  }
+}
+
+7.求二叉树深度(非递归算法)
+
+#define MAX_STACK 50
+
+int Depth(BTreee T)
+{
+   BTreee STACK1[MAX_STACK],p=T;
+   int STACK2[MAX_STACK];
+   int curdepth,maxdepth=0,top=-1;
+   
+   if(T!=null)
+   {
+     curdepth=1;
+	 while(p!=null||top!=-1)
+	 {
+	   while(p!=null)
+	   {
+	     STACK1[++top]=p;
+		 STACK2[top]=curdepth;
+		 p=p->lchild;
+		 curdepth++;
+	   }
+	   p=STACK1[top];
+	   curdepth=STACK2[top--];
+	   if(p->lchild==null&&p->rchild==null)
+	   {
+	      if(curdepth>maxdepth)
+		    maxdepth=curdepth;
+	   }
+	   p=p->rchild;
+	   curdepth++;   
+	 }
+   }
+   return maxdepth;
+}
+8.求结点所在层次
+
+算法思想：采用后序遍历的非递归算法对二叉树进行遍历，遍历过程中对每个结点判断其是否为满足条件
+的结点，若是满足条件的结点，则对此时堆栈中保存的元素个数再加1，即为该结点所在的层次。
+方法一看不懂看方法二   o(*≧▽≦)ツ┏━┓
+(1)
+#define MAX_STACK 50
+
+int LayerNode(BTreee T,int item)
+{
+   BTreee STACK1[MAX_STACK],p=T;
+   int STACK2[MAX_STACK],flag,top=-1;
+   
+   while(p!=null||top!=-1)
+   {
+     while(p!=null)
+	 {
+	   STACK1[++top]=p;
+	   STACK2[top]=0;
+	   p=p->lchild;
+	 }
+	 p=STACK1[top];
+	 flag=STACK2[top--];
+	 if(flag==0){
+	    STACK1[++top]=p;
+		STACK2[top]=1;
+		p=p->rchild;
+	 }
+	 else{
+	   if(p->data==item)
+	     return top+2;
+	   p=null;
+	 }
+   }
+}
+(2)
+int level(BTreee T,int item){ //假设二叉树结点互不相同
+ int d1,d2;
+ if(T==null) return 0;
+ if(T==item) return 1;
+ d1=level(T->lchild,item);
+ d2=level(T->rchild,item);
+ if(d1||d2) return 1+(d1>d2?d1:d2);
+ return 0;
+}
+
+
+9.交换二叉树中所有结点的左右子树的位置
+
+#define MAX_QUEUE 50
+
+void ExchangeBT(BTreee T)
+{
+   BTreee QUEUE[MAX_QUEUE],temp,p=T;
+   int front,rear;
+   
+   if(T！=null)
+   {
+     QUEUE[0]=T;
+	 front=-1;
+	 rear=0;
+	 while(front<rear)
+	 {
+	   p=QUEUE[++front];
+	   temp=p->lchild;
+	   p->lchild=[->rchild;
+	   p->rchild=temp;
+	   if(p->lchild!=null)
+	      QUEUE[++rear]=p->lchild;
+	   if(p->rchild!=null)
+	      QUEUE[++rear]=p->rchild;
+	 }
+   }
+}
+10.删除二叉树中以某个结点为根节点的子树
+
+#define MAX_STACK  50
+
+BTreee DeleteSubtree(BTreee &T ,int item)
+{
+  BTreee STACK[MAX_STACK],q,p=T;
+  int top=-1;
+  
+  if(T->data==item)
+  {
+    DestroyBT(T);
+	T=null;
+	return null;
+  }
+  else
+  {
+    while(p!=null||top!=-1)
+	{
+	  while(p!=null)
+	  {  if(p->data==item)
+	     {
+	      if(q->lchild==p)
+	 	   q->lchild=null;
+	      else
+	 	   q->rchild=null;
+	  	   DestroyBT(p);
+		   return T;
+	     }
+	    STACK[++top]=p;
+	    q=p;
+	    p=p->lchild;	   	
+	   }   
+	  q=STACK[top--];
+	  p=q-rchild;
+	}
+  }
+}
+三.查找
+1.顺序查找的递归算法
+int RecurSeqSearch(int A[],int n,int key,int i)
+{
+  if(i>=n)
+    return -1;
+  if(A[i]==key)
+    return i;
+  else 
+     return RecurSeqSearch(A,n,key,i+1);
+}
+pos=RecurSeqSearch(A,n,key,0);
+2.折半查找
+int BinSearch(int A[],int n,int key)
+{
+  int low=0,high=n-1,mid;
+  
+  while(low<=high)
+  {
+    mid=(low+high)/2;
+	if(key==A[mid])
+	  return mid;
+	if(key>A[mid])
+	   low=mid+1;
+	else
+	    high=mid-1;
+  }
+  return -1;
+}
+3.在按值递增排列且长度为n的线性表中折半查找并插入一元素
+void BinInsert(int A[],int &n,int key)
+{
+  int j,low=0,high=n-1,mid;
+  
+   while(low<=high)
+  {
+    mid=(low+high)/2;
+	if(key>A[mid])
+	   low=mid+1;
+	else
+	    high=mid-1;
+  }
+  for(j=n;j>low;j--)
+  {
+     A[j]=A[j-1];	 
+  }
+  A[low]=key;
+  n++;
+}
+4.在按值递增排列且长度为n的线性表中折半查找值不小于key的最小元素
+void BinSearch(int A[],int n,int key)
+{
+  int low=0,high=n-1,mid;
+   while(low<=high)
+  {
+    mid=(low+high)/2;
+	if(key==A[mid])
+	  return mid;
+	if(key>A[mid])
+	   low=mid+1;
+	else
+	    high=mid-1;
+  }
+  if(low<=n-1)
+   return low;
+  else
+   return -1;
+}
+四。排序 书上
+1.插入排序
+2.折半插入排序
+3.冒泡排序
+4.选择排序
+5.快速排序
+6.堆排序

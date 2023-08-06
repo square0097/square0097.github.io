@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>简单的NE555与CD4017流水灯</title>
-    <url>/2021/04/16/%E7%AE%80%E5%8D%95%E7%9A%84NE555%E4%B8%8ECD/</url>
-    <content><![CDATA[]]></content>
+    <title>LCD12864串口屏通信协议</title>
+    <url>/2023/08/06/LCD12865%E4%B8%B2%E5%8F%A3%E5%B1%8F/</url>
+    <content><![CDATA[<p>LCD12864串口显示屏具体操作信息</p>
+<a id="more"></a>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>串口波特率：9600</p>
+<h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><h3 id="字符串显示"><a href="#字符串显示" class="headerlink" title="字符串显示"></a>字符串显示</h3><p>###画点协议</p>
+]]></content>
   </entry>
   <entry>
     <title>长按按钮开关机</title>
@@ -40,7 +44,7 @@
   </entry>
   <entry>
     <title>欢迎访问</title>
-    <url>/2020/03/07/welcome/</url>
+    <url>/2020/03/07/%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE/</url>
     <content><![CDATA[<h1 id="訪問を歓迎します！！！"><a href="#訪問を歓迎します！！！" class="headerlink" title="訪問を歓迎します！！！"></a>訪問を歓迎します！！！</h1><p>用户可搜索关键字<br>博客新增评论功能<br><img src="https://ae01.alicdn.com/kf/H955510208f0d4cbb82b943026428f0b20.png" alt></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29722692&auto=1&height=66"></iframe>
 ]]></content>
@@ -176,7 +180,7 @@ sbit led3=P1^0;</code></pre><h3 id="JDY-40和3-3V输出"><a href="#JDY-40和3-3V
   </entry>
   <entry>
     <title>如何制作一台多功能循迹蓝牙遥控小车</title>
-    <url>/2020/02/20/car/</url>
+    <url>/2020/02/20/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E5%8F%B0%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%BE%AA%E8%BF%B9%E8%93%9D%E7%89%99%E9%81%A5%E6%8E%A7%E5%B0%8F%E8%BD%A6/</url>
     <content><![CDATA[<h2 id="在刚接触51单片机的时候觉得这是很难的事情"><a href="#在刚接触51单片机的时候觉得这是很难的事情" class="headerlink" title="在刚接触51单片机的时候觉得这是很难的事情"></a>在刚接触51单片机的时候觉得这是很难的事情</h2><p>记录蓝牙小车的制作过程<br><img src="https://ae01.alicdn.com/kf/H2c517b909dbd4e5ba2a3b6ec558a75d6W.jpg" alt></p>
 <a id="more"></a>
 <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>不要觉得它很难，就像在做一个玩具一样。蓝牙小车对于初学者是道坎，pwm调速这个就难到了很多人，其实这些都不难。</p>
