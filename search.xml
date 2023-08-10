@@ -5,8 +5,9 @@
     <url>/2023/08/06/LCD12865%E4%B8%B2%E5%8F%A3%E5%B1%8F/</url>
     <content><![CDATA[<p>LCD12864串口显示屏具体操作信息</p>
 <a id="more"></a>
-<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>串口波特率：9600</p>
-<h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><h3 id="字符串显示"><a href="#字符串显示" class="headerlink" title="字符串显示"></a>字符串显示</h3><p>###画点协议</p>
+<h2 id="通信协议-V1-0版本"><a href="#通信协议-V1-0版本" class="headerlink" title="通信协议 V1.0版本"></a>通信协议 V1.0版本</h2><p>串口波特率：115200<br>数据格式：【指令位】【数据(最长16个字符)】【回车(0x0d)】<br>    指令 0x01-0x04  对应1-4行<br>    指令 0x10          清屏</p>
+<p>状态返回：0X0E 接收完成<br>    0X0F 显示完成</p>
+<p>注：汉字占两个字符位，一行最多8个汉字，且必须从偶数位开始<br>    例1：123 你好<br>    例2：1234你好</p>
 ]]></content>
   </entry>
   <entry>
